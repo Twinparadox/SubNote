@@ -1,0 +1,100 @@
+ARM Architecture
+
+Acorn Computers에서 1990년 독립해 설립된 회사
+32bit RISC Processor
+
+전체 수요의 70% 차지함
+간단한 명령어
+크기가 작은 장치에 적합
+
+ARM코어를 설계해 라이센스 판매
+
+
+Architecture
+
+v4, v4T(Thumbs mode), v5TE(DSP 기능 확장), v5TEJ(Java 명령 지원), v6
+
+
+Processor
+
+ARM의 기본구조에 cache, MMU 등의 주변 장치를 포함해 개발한 칩
+- StrongARM
+- ARM720T
+- ARM940T
+- XScale 등
+
+
+1. 명령어
+
+RISC(Reduced Instruction Set Computer)
+CPU 명령어 개수를 줄여 HW 구조를 간단하게 만드는 방식
+전력 소모도 적어 임베디드 프로세서에서 채택됨
+
+32bit Architecture 명령어와 32bit 레지스터
+데이터크기(Byte, Halfword, Word)
+
+ARM 명령어 셋(32bit)
+Thumb 명령어 셋(16bit)
+
+Jazell core 확장 시, java bytecode 실행 가능
+
+
+2. 레지스터
+
+범용 목적의 30개(14개 + 16개)
+
+User모드용 16개(14개 + 2개)
+유일한 Unprevileged 모드, 리소스 접근에 제약이 따름
+(Previleged 모드는 제약이 없어 자유로운 접근 가능)
+
+Link Register(LR)
+r14 레지스터로 분기 후, 되돌아왔을 때 수행해야할 다음 명령의 주소를 가짐
+Program Counter(PC)
+r15 레지스터로 실행되는 프로그램 명령의 위치를 가짐
+
+
+3. 예외
+
+예외 발생 시, 모드를 전환해 예외를 처리함
+
+- Fast interrupt, Normal interrupt, Memory abort, Undefined instruction, Software interrupt(SWI)
+
+
+ARM = 1 unprivileged 모드 + 6 privileged 모드
+
+레지스터의 인터럽트 모드 전용으로 전환
+r13, r14의 경우 : banked 레지스터로 전환
+
+Fast interrupt 처리
+r8~r12 레지스터를 따로 사용
+r8~r12를 별도로 사용하면 저장 복구가 필요하지 않아 빠른 처리를 할 수 있음
+
+
+예외처리 과정
+
+1. 예외 발생 시, 현재 명령까지만 실행 후, 실행 중단
+2. 예외 벡터로 분기
+3. 예외의 종류별로 분기 주소 달라짐
+4. 부트 코드의 초기화 코드에 핸들러가 등록되어 있으므로 등록된 핸들러를 호출해 실행
+
+
+핸들러로 분기 시, 되돌아올 주소를 LR(r14)에 저장
+핸들러를 마치면서 PC(r15)에 LR값을 복사하면, 핸들러가 호출되기 이전으로 돌아감
+
+
+4. 상태 레지스터
+
+Current Program Status Register(CPSR)
+프로세서의 상태를 저장하는 레지스터
+
+
+Condtion[4bit] : Nagative, Zero, Carry, Overflow tag
+Interrupt disalbe[2bit] : Fast interrupt, Normal interrupt를 사용 불가로 설정
+Processor mode[5bit] : 동작 모드
+명령어 모드[1bit] : ARM / Thumb 모드
+
+
+Saved Program Status Register(SPSR)
+- 예외 발생 시 모드 전환을 위해 현재 상태가 저장된 CPSR의 값을 저장하기 위한 레지스터
+
+

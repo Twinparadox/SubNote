@@ -1,0 +1,65 @@
+typedef struct sockaddr {
+u_short sa_family;
+char sa_data[14];
+} SOCKADDR;
+
+sa_family
+주소 체계를 나타내는 16bit value
+ex) TCP/IP Protocol, AF_INET or AF_INET6
+
+sa_data
+해당 주소 체계에서 사용할 주소 정보
+ex) TCP/IP Protocol IP Address and Port
+
+TCP/IP -> SOCKADDR_IN{} or SOCKADDR_IN6{}
+IrDa -> SOCKADDR_IRDA{}
+
+
+
+IPv4
+typedef struct sockaddr_in
+{
+short sin_family;
+u_short sin_port;
+struct in_addr sin_addr;
+char sin_zero[8];
+} SOCKADDR_IN;
+typedef struct in_addr
+{
+uion
+{
+struct { u_char s_b1, s_b2, s_b3, s_b4; } S_un_b;
+struct { u_short s_w1, s_w2; } S_un_w;
+u_long S_addr;
+} S_un;
+#define s_addr S_un.S_addr
+} IN_ADDR;
+
+IPv6
+typedef struct sockaddr_in6
+{
+short sin6_family;
+u_short sin6_port;
+u_long sin6_flowinfo;
+struct in6_addr sin6_addr;
+u_long sin6_scope_id;
+} SOCKADDR_IN;
+typedef struct in6_addr
+{
+union
+{
+u_char Byte[16];
+u_short Word[8];
+} u;
+} IN6_ADDR;
+
+IN_ADDR struct
+sockaddr_in 구조체는 socket programming address 저장하기 위해 사용
+bind()함수와 같이 인자로 주소를 요구할 경우 사용
+
+구조체와 그 크기(Byte)
+SOCKADDR 16
+SOCKADDR_IN 16
+SOCKADDR_IN6 28
+SOCKADDR_IRDA 32
+SOCKADDR_BTH 30

@@ -1,0 +1,14 @@
+int writev(int fd, const struct iovec* vector, int count);
+int readv(int fd, const struct iovec* vector, int count);
+성공 : 읽은 전달한 바이트 수, 실패 : -1
+
+
+- fd : 데이터 전송의 목적지를 나타내는 소켓의 파일 디스크립터
+- vector : iovec 구조체 배열의 이름의 인자(전송 데이터의 정보)
+- count : 데이터를 전송하기 위해 참고할 iovec 구조체의 변수의 수
+
+
+struct iovec{
+void* iov_base; // starting address
+size_t iov_len; // Number of bytes to transfer
+};

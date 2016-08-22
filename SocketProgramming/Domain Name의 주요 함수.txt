@@ -1,0 +1,55 @@
+gethostbyname
+
+struct hostent* gethostbyname(const char* name);
+성공 : hostent 구조체, 실패 : NULL
+
+- name : 도메인 네임
+
+주어진 호스트 네임에 상응하는 hostent타입의 구조체 반환
+Name : 호스트의 이름, 표준 점 표기법의 IPv4 혹은 IPv6 주소
+
+
+struct hostent
+{
+char* h_name; // Official name of host
+char** h_aliases; // Alias list
+int h_addrtype; // Host address type
+int h_length; // Length of address
+char** h_addr_list; // List of addresses from name server
+#define h_addr h_addr_list[0] // Address, for backward compatibility
+};
+
+
+
+gethostbyaddr
+
+struct hostent* gethostbyaddr(const char* addr, socklen_t len, int type);
+성공 : hostent 구조체, 실패 NULL_0, -1
+
+- addr : 2진수의 IP주소
+- len : addr의 길이 (IPv4 : 4, IPv6 : 16)
+- type : 주소의 타입 (IPv4: AF_INET, IPv6 : AF_INET6)
+
+2진수 IP주소와 대응되는 hostent 구조체 반환
+
+
+
+inet_ntoa
+
+char* inet_ntoa(struct in_addr addr);
+성공 : "."으로 표시되는 IPv4 주소의 문자열, 실패 : NULL
+
+- addr : 2진수의 IP주소
+
+2진수 IPv4 주소를 "." 형식 문자열 주소로 변환
+
+
+
+inet_addr
+
+inaddr_t inet_addr(const char* name);
+성공 : 2진수 IPv4주소, 실패 : -1
+
+- addr : 2진수의 IP주소
+
+"."형식의 IPv4 문자열 주소를 2진수로 변환

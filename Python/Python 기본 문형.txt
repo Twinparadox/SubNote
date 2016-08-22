@@ -1,0 +1,28 @@
+python 예약어
+
+and, as, assert, break, class, continue, def, del, elif, else, except, exec, finally, for, from, global, if, import, in, is, lambda, not, or, pass, print, raise, return, try, while, with, yield
+
+
+내장 함수
+- 별도의 모듈 추가 없이 제공되는 함수, 대푲거으로 abs, max, min, pow, chr, str, range, type 등
+
+
+python 변수 생성 및 삭제
+
+변수에 임의의 값이 할당되면 변수 생성
+del 예약어로 삭제함
+식별자 : 대소문자 구분, 대소문자 알파벳과 언더바로 시작, 특수문자 사용 불능
+
+
+python 주석문
+#으로 시작
+연속된 라인은 \로 처리
+
+
+Console input output
+Input
+raw_input() : 문자열 입력 내장함수
+int() : 문자열을 정수로 변환
+input() : 정수, 실수 expression 입력 내장
+Output
+print() : 화면에 자료를 출력

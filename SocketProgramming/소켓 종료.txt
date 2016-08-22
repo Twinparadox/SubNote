@@ -1,0 +1,100 @@
+Half-Close
+
+
+소켓을 통해 두 컴퓨터가 연결되면 데이터 송수신 가능 상태가 됨
+LINUX에서는 장치와 상관 없이 데이터 입출력을 스트림으로 봄
+1개의 소켓은 입력 버퍼, 출력 버퍼 각각 한 개 소유
+
+
+데이터 손실 없이 연결 종료하기 위함
+
+- 연결 종료를 원하는 컴퓨터는 자신의 출력버퍼를 제거하고 상대방에게 종료 요청 신호 전달(송신불가, 수신가능)
+- 상대방 컴퓨터는 종료 요청 신호 수신 후, 자신의 입력버퍼를 제거하고(수신불가), 자신의 출력버퍼를 제거(송신불가) 그리고, 연결종료 확인 메세지 응답
+- 연결종료 확인 메세지 수신한 컴퓨터의 수신버퍼 제거
+- 입출력 버퍼가 모두 없을 때, 소켓 디스크립터 제거(소켓 종료)
+
+
+
+shutdown Function
+
+
+int shutdown(int sockfd, int how);
+성공 : 0, 실패 : -1
+- sockfd : 연결을 종료할 소켓 디스크립터
+- how : 연결 종료 방법
+[SHUT_RD : 입력 스트림 종료]
+[SHUT_WR : 출력 스트림 종료]
+[SHUT_RDWR : 입출력 스트림 종료]
+
+일반적으로 연결 종료 시 사용하는 close 함수는 소켓의 참조 카운터가 0이 되면 종료
+shutdown의 경우 참조카운터와 무관하게 연결 종료 가능
+shutdown 함수는 인자 값에 따라 종료 처리가 달라짐
+
+
+
+
+TCP 연결 종료
+
+- 4-way Hand Sahking이 이루어짐
+- 신뢰성 있는 TCP 연결 종료 절차가 없어 타임아웃 활용
+- TCP는 재발송하기 때문에 TIME_WAIT에서도 데이터 수신 가능
+- 만약 TCP 연결 종료 직후, 동일 IP, 포트 번호와 연결되어 데이터가 전송될 경우, 수신 측은 수신된 데이터가 이전 연결에서 전송된 것인지 신규 연결에 의해 전송된 것인지 식별 불능
+- TCP 패킷 헤더의 SEQ의 시작을 임의로 지정하는 것도 한 가지 방법
+
+1. 호스트 A(Active close)가 FIN 송신, FIN_WAIT1로 전이
+
+2. 호스트 B(passive close)가 FIN 수신 후 ACK 송신하고, CLOSE_WIAT로 전이
+- 호스트 B는 즉시 3번째 단계를 실행하는 것이 아니며 데이터를 active close(호스트 A) 송신이 가능[Half Close 상태]
+
+3. 호스트 B가 FIN 송신, LAST_ACK로 전이
+
+4. 호스트 A가 FIN 수신 후, ACK 송신하고 TIME_WAIT로 전이
+
+5. 호스트 A는 2MSL 시간 경과 후 CLOSED로 전이
+(2MSL은 대개 120sec, 이 기간에 수신 버퍼가 열려 있고 수신 가능 상태, 리소스들은 계속 점유하고 있음)
+MSL;Maximum Segment Lifetime
+- 통상 60sec
+- 패킷 폐기 전 네트워크에서의 생존시간
+- LINUX에서 '$ /sbin/sysctl net.ipv4.tcp_fin_timeout'명령어로 확인 가능
+
+
+Active Close 측에서의 일반적인 TCP 연결 종료 시 상태 전이
+ESTABLISHED -> FIN_WAIT1 -> FIN_WAIT2 -> TIME_WAIT -> CLOSED
+
+Passvie Close 측에서의 일반적인 TCP 연결 종료 시 상태 전이
+ESTABLISHED -> CLOSE_WAIT -> LAST_ACK -> CLOSED
+
+
+
+
+TCP 동시 연결 종료
+
+1. FIN을 송신, FIN_WAIT1로 전이
+
+2. FIN 수신 후, ACK 송신, CLOSING으로 전이 
+
+
+
+CLOSE_WAIT
+
+
+Passive Close 측(통상적으로 Server)에서 발생
+해당 포트가 해제되지 않아 계속 쌓이면 신규 TCP 연결이 불가능하게 됨
+
+프로세스의 종료 혹은 네트워크를 재시작하여 해결
+
+Passive Close 측 프로그램에서 연결 종료 처리 흐름에 이상이 있는 경우이므로, 적절한 위치에서 Close 함수 호출하도록 수정해야 함
+
+`$ netstat -p tcp -a -n | grep CLOSE_WAIT | grep 12345`와 같은 방식으로 확인 가능
+
+
+
+FIN_WAIT2
+
+Client가 Server에 종료 요청한 후, Server에서 ACK 메세지는 받았지만, 종료를 완료햇다는 FIN 메세지를 받지 못한 상태
+
+Passive Close 측(통상적으로 Server)에서 CLOSE_WAIT이 발생했을 때, Active Close 측에서 FIN_WAIT2가 발생
+
+일정 시간 후 타임아웃에 의해 정리됨
+
+좀 더 빠른 정리를 위해서는 커널 옵션 조정을 고려

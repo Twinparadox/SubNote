@@ -1,0 +1,66 @@
+bind Function
+
+listen function에서 사용할 server socket의 서버 주소 정보 설정
+서버 주소 정보를 두 번째 인자 addr을 통해 전달 가능
+
+int bind(int sockfd, const struct sockaddr* addr, socklen_t addrlen);
+return 0(success) or 1(fail)
+
+- sockfd : 주소를 할당할 서버 소켓 디스크립터
+- addr : 서버 주소 정보를 담은 구조체(IP Address, Port Number, etc..)
+
+
+listen Function
+
+클라이언트의 연결 요청을 수신하기 위한 서버 소켓 지정
+'연결 요청 대기 큐' 생성
+
+int listen(int sockfd, int backlog);
+return 0(success) or 1(fail)
+
+- sockfd : 클라이언트의 연결 요청을 수신하기 위한 서버 소켓
+- backlog : 연결요청 대기 큐의 길이
+
+
+accept Function
+
+연결 요청 대기 큐에서 대기 중인 클라이언트 요청 허가
+서버-클라이언트를 위한 신규 소켓 생성
+
+int accept(int sockfd, struct sockaddr* addr, socklen_t* addrlen);
+성공 : 새롭게 생성된 소켓 디스크립터
+실패 : -1
+
+- sockfd : listen 함수에 의해 설정된 서버 소켓 디스크립터
+- addr : 연결을 요청한 클라이언트의 주소 정보
+- addrlen : addr의 크기
+
+
+read Function
+
+전송된 메세지 수신하기 위해 사용
+LINUX에서는 소켓이나 파일을 동일한 타입의 디스크립터로 정의하므로 데이터 수신 시, 해당 함수 사용 가능
+
+ssize_t read(int fd, void* buf, size_t nbytes);
+성공 : 읽은 데이터의 길이(byte)
+실패 : -1
+
+- fd : 데이터를 읽을 소켓 or 파일 디스크립터
+- buf : read 함수에 의해 읽혀진 데이터가 저장될 buffer
+- nbytes : read 함수 호출 시, 읽고자 하는 데이터의 크기
+
+# 항상 해당 데이터 사이즈 만큼 넣는 것이 아님
+
+
+write Function
+
+메세지를 송신하기 위해 사용
+LINUX에서는 소켓이나 파일을 동일한 타입의 디스크립터로 정의하므로 데이터 송신 시, 해당 함수 사용 가능
+
+ssize_t write(int fd, const void* buf, size_t nbytes);
+성공 : 읽은 데이터의 길이(byte)
+실패 : -1
+
+- fd : 데이터를 쓸 소켓 or 파일 디스크립터
+- buf : write 함수에 의해 송신할 데이터가 저장될 buffer
+- nbytes : write 함수 호출 시, 송신할 데이터의 크기
