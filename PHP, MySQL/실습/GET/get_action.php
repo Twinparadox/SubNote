@@ -1,0 +1,3 @@
+<?
+	echo("$QUERY_STRING");
+?>
