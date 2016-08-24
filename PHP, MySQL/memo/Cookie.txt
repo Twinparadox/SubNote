@@ -9,3 +9,17 @@
 쿠키는 이럴 때, 웹 서버가 클라이언트를 식별하기 위해 클라이언트의 웹 브라우저에 심어 놓는 정보
 
 웹 서버에서는 이런 쿠키 정보를 이용해 다수의 클라이언트를 식별하기 위한 용도나 사용자 세션을 유지하기 위한 용도로 사용함
+
+
+
+setCookie 함수
+
+- 쿠키 변수 설정 함수
+
+int setCookie(string name, string value, int expire, string path, string domain, int sequre);
+
+- name : 쿠키 변수명
+- value : 쿠키 변수에 담을 값
+- expire : 쿠키 설정 시간부터 시작해 만료 시간까지의 시간(sec)
+
+
