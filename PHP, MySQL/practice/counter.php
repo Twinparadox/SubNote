@@ -1,7 +1,7 @@
 <?
 // using MySQL DB table
 // Connect to DB
-	$con = mysql_connect("localhost","root","dnjsdn5484");
+	$con = mysql_connect("localhost","root","apmsetup");
 	mysql_select_db("tparadox",$con);
 	
 	$result=mysql_query("select*from counter",$con);
