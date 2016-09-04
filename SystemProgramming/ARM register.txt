@@ -8,3 +8,46 @@ PC(Program Counter) 1개
 CPSR : 현재 프로세서 상태를 저장, 모든 모드들이 공용으로 사용
 SPSR : 모드 변경 시 이전 모드의 상태값 저장, 예외 모드에 하나씩 주어짐
 
+
+##특수 레지스터
+
+#Stack Point(SP)
+
+- 프로그램의 스택 위치를 저장하는 레지스터
+- ARM은 모드별 스택을 따로 사용해 모드별로 SP 필요
+
+
+#Link Register(LR)
+
+- 서브루틴으로 분기할 때 되돌아 올 주소를 저장하기 위한 레지스터
+- 모드별로 할당
+
+
+#Program Counter(PC)
+
+- 프로그램의 위치를 저장
+- 하나만 존재해 모든 모드가 공용 사용
+
+
+
+##상태 레지스터
+
+- ARM의 상태를 저장하기 위한 레지스터 (CPSR 1개 + SPSR 5개)
+
+#구성
+
+Condition code flags
+
+- N : ALU 연산 결과가 음수일 경우 설정
+- Z : ALU 연산 결과가 0일 경우 설정
+- C : ALU 연산 결과에 Carry 발생, 자리 올림 발생 시 설정
+- V : ALU 연산 결과에 Overflow 발생 시 설정
+- Q : Architecture V5TE/J에 추가된 flag로 Saturation 발생을 나타냄
+- J : Architecture V5TE/J에 추가된 flag로 Jazelle state를 나타냄
+
+Control bits
+
+- I : 1로 설정하면 IRQ 불가
+- F : 1로 설정하면 FIQ 불가
+- T : 0이면 ARM state, 1이면 Thumb state
+- mode[4:0] : ARM의 모드를 나타냄
