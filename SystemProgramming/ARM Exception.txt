@@ -10,7 +10,7 @@
 
 # 종류
 
-Reset, Data Abort, Undefined Instructions, IRQ(Normal interrupt), Software Interrupt(SWI), FIQ(Fast interrupt), Perfetch Abort
+Reset, Data Abort, Undefined Instructions, IRQ(Normal interrupt), Software Interrupt(SWI), FIQ(Fast interrupt), Prefetch Abort
 
 
 
@@ -18,3 +18,57 @@ Reset, Data Abort, Undefined Instructions, IRQ(Normal interrupt), Software Inter
 
 에외가 발생하면 실행하던 프로그램을 멈추고 지정된 주소로 분기하기 위해 지정된 주소
 
+
+
+## 예외 처리
+
+1. r14_<예외 모드> = 복귀 주소
+2. SPSR_<예외 모드> = CPSR
+3. CPSR[4:0] = 예외 모드 번호
+4. CPSR[5] = 0
+5. if <예외 모드> == Reset or FIQ then, CPSR[6] = 1
+6. CPSR[7] = 1
+7. PC = Exception vector address
+
+
+
+## 예외 종류별 처리
+
+# Reset
+Reset키를 누르면 발생, 현재 명령어까지 실행하고 멈춤
+처리과정은 일반적인 예외 처리 과정과 동일
+Reset 핸들러는 보통 Startup 코드
+
+# Undefined Instruction Exception
+ARM 프로세서에 정의되지 않은 명령어 실행 시 발생하는 예외
+코프로세서의 명령인지 확인 후, 코프로세서용 명령어가 아니면 예외 발생
+처리 과정은 일반적인 처리과정과 동일함
+Reset 핸들러는 보통 Startup 코드
+
+# Software Interrupt Exception
+S/W interrupt(SWI) 명령이 들어왔을 때 발생
+처리 과정은 일반적인 처리과정과 동일함
+
+# Prefetch Abort
+메모리 시스템에 의해서 발생
+Invalid 명령어를 실행하려고 할 때 발생
+처리 과정은 일반적인 처리과정과 동일함
+
+# Data Abort
+메모리 시스템에 의해서 발생
+접근한(읽기/쓰기) 데이터가 Invalid할 때 발생
+처리 과정은 일반적인 처리과정과 동일함
+
+# Interrupt Request(IRQ) Exception
+프로세서 외부에서 IRQ 신호가 들어왔을 때 발생
+FIQ보다 우선순위가 낮음
+처리 과정은 일반적인 처리과정과 동일함
+
+# Fast Interrupt Request(FIQ) Exception
+프로세서 외부에서 FIQ 신호가 들어왔을 때 발생
+FIQ 예외 처리를 벡터의 마지막에 배치한 이유
+(예외 처리 루틴으로 분기하지 말고, 벡터에 바로 처리 루틴을 프로그램하기 위함. 문맥 교환의 오버헤드 줄이기 위한 방법)
+처리 과정은 일반적인 처리과정과 동일함
+
+# 예외 우선순위
+Reset>Data Abort>FIQ>IRQ>Prefetch Abort>Undefined Instruction(SWI)
