@@ -1,0 +1,88 @@
+###Python 문자열 메소드
+
+
+s = 'i like programming.'
+
+s.upper() # 모두 대문자로
+s.lower() # 모두 소문자로
+s.swapcase() # 대문자는 소문자, 소문자는 대문자
+s.capitalize() # 첫 문자를 대문자로
+s.title() # 각 단어의 첫 문자를 대문자로
+
+
+s.count('like') # 'like' 문자열이 출현한 횟수 반환
+s.find('like') # 'like' 첫 글자의 위치(offset)을 반환
+s.find('like',3) # offset=3 부터 'like'를 검색해 첫 글자의 위치 반환
+
+- find의 경우 단어가 없을 경우 -1 반환
+
+
+s.startswith('i like') # 'i like'로 시작하는 문자열인지 판단
+s.endswith('swimming.') # 'swimming.'로 끝나는 문자열인지 판단
+s.statrtswith('progr', 7) # 7번째 문자열이 'progr'로 시작하는지 판단
+
+- 대소문자도 구분
+
+
+
+s.strip() # 좌우 공백을 제거해, 새로운 스트링 생성
+t=s.strip() # strip()을 통해 생성된 스트링을 대입
+s.rstrip() # 오른쪽 공백 제거
+s.lstrip() # 왼쪽 공백 제거
+' 문자열'.strip() # 문자열을 바로 넣을 수 있음
+s.strip('') # 인자로 주어진 스트링 안에 지정된 모든 문자를 좌우에서 제거함
+
+- 근원 스트링이 변경되는 것은 아님
+- \t도 제거함
+
+
+
+s.replace('i', 'we') # 새로운 스트링을 생성함
+
+- 근원 스트링이 변경되는 것은 아님
+
+
+
+s.split() # 공백으로 분리 (모든 공백 제거 및, 문자열 내의 단어 리스트 획득)
+s.split('and') # 'and'를 기준으로 분리
+
+
+u='spam ham\tegg\ncheese'
+t=u.split() # 문자열 내의 단어 리스트
+t2= ':'.join(t) # 리스트 t 내부의 각 원소들을 ':'로 연결한 문자열 반환, 타입은 스트링
+
+- 한글도 잘 쪼개짐
+
+
+
+lines='''first line
+second line
+third line'''
+
+lines2=lines.splitlines() # 문자열을 라인 단위로 분리한 각 원소들을 지닌 리스트 반환
+
+
+
+c=u.center(60) # 60자리를 확보하되, 기존 문자열을 가운데 정렬한 새로운 문자열 반환
+u.ljust(60) # 60자리를 확보하되, 기존 문자열을 왼쪽 정렬한 새로운 문자열 반환
+u.rjust(60) # 60자리를 확보하되, 기존 문자열을 오른쪽 정렬한 새로운 문자열 반환
+u.center(60,'')
+
+- 공백에 채워질 문자열 지정 가능
+
+
+
+isdigit() # 문자열 내의 문자들이 모두 숫자인가
+isalpha() # 문자열 내의 문자들이 모두 영문자인가
+isalnum() # 문자열 내의 문자들이 모두 영문자 혹은 숫자인가
+islower() # 문자열 내의 문자들이 모두 소문자인가
+isupper() # 문자열 내의 문자들이 모두 대문자인가
+isspace() # 문자열 내의 문자들이 모두 공백인가
+istitle() # 문자열이 Title형식( 각 단어의 첫글자가 모두 대문자 )인가
+
+- True, False 반환
+
+
+zfill(5) # 5글자 자리 확보 뒤, 문자열을 쓰되, 남는 공백은 0을 채움
+
+- Zero Fill
