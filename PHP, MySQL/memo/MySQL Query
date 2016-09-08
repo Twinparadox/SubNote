@@ -1,0 +1,19 @@
+### MySQL Query
+
+- NULL과 ''은 동일하지 않음
+- where을 이용한 조건 추가
+- 조건이 2개 이상일 경우 and, or 이용
+- between을 이용해서 범위 지정도 가능
+
+
+
+##update
+
+update table set record1='', record2='';
+update table set record1='', record2='' where filed='';
+
+해당 field의 해당하는 조건을 만족하는 경우, 해당 레코드를 update
+
+update table set age = age + 1;
+-> age field에 해당하는 모든 값들을 1씩 증가
+-> 해당 레코드 자체에 연산식을 이용한 value update 가능
