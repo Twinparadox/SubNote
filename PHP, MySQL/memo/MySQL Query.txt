@@ -29,7 +29,6 @@ drop table table_name;
 
 ##insert
 
-
 insert into table_name values ('', '', '', 5);
 -> field의 var_type이 varchar, string인 경우, ''내에 입력
 -> field의 var_type이 int인 경우 숫자 바로 입력
