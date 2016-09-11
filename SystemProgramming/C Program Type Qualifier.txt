@@ -1,0 +1,16 @@
+### C Program Type Qualifier
+
+## Volatile
+
+캐시를 사용하지 않음(no-cache)
+
+#define GPECON (*(volatile unsigned int*)0x56000040)
+#define GPEDAT (*(volatile unsigned int*)0x56000044)
+
+
+
+## const
+
+변수를 상수화하는 한정자
+한 문장에 여러번 사용될 수 있고, 위치에 따라 의미가 달라짐
+값이 바뀌어서는 안될 변수에 지정, 보통 라이브러리 함수에서 많이 사용
