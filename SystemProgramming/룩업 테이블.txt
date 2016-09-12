@@ -1,0 +1,7 @@
+###룩업 테이블
+
+
+### Loop Unrolling
+
+i, from 0 to 50 i++, operating once
+i, from 0 to 10 i++, operating 5times
