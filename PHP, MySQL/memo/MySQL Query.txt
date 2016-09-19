@@ -1,0 +1,61 @@
+### MySQL Query
+
+- NULL과 ''은 동일하지 않음
+- where을 이용한 조건 추가
+- 조건이 2개 이상일 경우 and, or 이용
+- between을 이용해서 범위 지정도 가능
+
+##desc
+desc table_name;
+describe table_name;
+
+-> describe table
+
+
+##alter
+
+alter table table_name add field_name var_type;
+-> table_name에 var_type을 가진 field_name의 field 생성
+
+alter table table_name drop field_name;
+-> table_name에 field_name을 삭제
+
+alter table table_name modify field_name var_type;
+-> table_name에 field_name에 해당하는 필드를 var_type로 수정
+
+drop table table_name;
+-> table_name을 삭제
+
+
+##insert
+
+insert into table_name values ('', '', '', 5);
+-> field의 var_type이 varchar, string인 경우, ''내에 입력
+-> field의 var_type이 int인 경우 숫자 바로 입력
+-> ""도 사용 가능하나, php에서 혼선 발생할 수도..
+-> table에 record 삽입 시, field의 순서에 맞추어야 하며, 모든 필드에 대해 value 지정이 필요
+-> 입력을 원하지 않을 경우 정수는 0, 문자열과 가변문자는 ''을 삽입
+
+
+insert into table_name(filed1, field2) values('', '');
+-> field의 순서와 위치를 맞추지 않고 특정 field에만 value를 입력하고자 하는 경우..
+-> 이 경우 입력되지 않은 field는 NULL로 처리
+
+
+##update
+
+update table_name set record1='', record2='';
+update table_name set record1='', record2='' where filed='';
+
+해당 field의 해당하는 조건을 만족하는 경우, 해당 레코드를 update
+
+update table_name set age = age + 1;
+-> age field에 해당하는 모든 값들을 1씩 증가
+-> 해당 레코드 자체에 연산식을 이용한 value update 가능
+
+
+##부분 문자열 추출
+where field_name like "%차" : 차로 끝나는 레코드 선택
+where field_name like "차%" : 차로 시작하는 레코드 선택
+where field_name like "%차%" : 차를 포함하는 레코드 선택
+
