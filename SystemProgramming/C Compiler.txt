@@ -1,0 +1,30 @@
+/usr/bin/gcc
+ 
+ 
+gcc는 엄밀히 말해서 C Compiler는 아니고 Compiler Driver라고 봐야 함.
+ 
+- 실제 컴파일 과정을 담당하지 않고, 전처리기와 C Compiler, Assembler, Linker를 각각 호출해주는 역할만 함.
+- 각각 컴파일 과정에 필요한 명령을 순차적으로 호출
+ 
+ 
+cc : C Compiler Driver, gcc와 동일
+c++ : C++ Compiler Driver, g++과 동일
+gcj : Java Compiler Driver
+ 
+ 
+/usr/libexec/gcc/OS종류/버전/cc1
+ 
+진짜 C Compiler는 이것이며, 상위 디렉토리에는 여러 실행파일이 존재
+ 
+- cc1 : C Compiler, -E Option을 붙이면 전처리기 동작
+- cc1plus : C++ Compiler, -E Option을 붙이면 전처리기 동작
+- collect2 : Linker(내부에서 Linker인 Id를 호출해 링크함)
+- f951 : Fortran Compiler
+ 
+ 
+gcc Compile 과정 단계별 설명
+ 
+1. gcc는 cpp0, cc1 -E 등을 호출해 전처리과정을 거쳐 hello.c를 hello.i 파일로
+2. hello.i 파일은 C Compiler cc1에 의해 Assembler Code hello.s로
+3. hello.s 파일은 as Assembler에 의해 Assemble Process를 거쳐, hello.o(object file)로
+4. hello.o 파일은 다시 collect2가 Linker인 Id Call, libc.a와 같은 Standard C Library와 링크해 최종적인 실행파일 hello.exe 만듦
