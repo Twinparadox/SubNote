@@ -1,0 +1,108 @@
+### JavaScript 내장 객체
+
+- JavaScript 자체적으로 제공
+- Object : 최상위 객체, 모든 객체는 이를 기본으로 하여 생성
+- Number : 숫자 표현하는 객체
+- String : 문자열 표현하는 객체
+- 메서드 체이닝 : 메서드를 연속적으로 사용하는 것
+
+
+
+## Object
+
+- JavaScript의 가장 기본적인 내장 객체로, 최상위 객체
+- Object() 생성자 함수에 의해 생성된 인스턴스
+- 모든 기본 내장 객체는 Object 객체를 기본으로 만들어짐
+- 생성
+var object{};
+var object = new Object();
+
+- 메서드
+constructor() : 객체의 생성자 함수를 나타냄
+hasOwnProperty(V) : 문자열 매개 변수로 전달된 속성이 객체에 있는지 확인
+isPrototypeOf(object) : 객체가 object의 프로토타입인지 검사
+propertyIsEnumerable(V) : 전달받은 속성이 반복문으로 열거 가능한지 확인
+toLocaleString() : 객체를 호스트 환경에 맞는 언어의 문자열로 변경
+toString() : 객체를 문자열로 변경
+valueOf() : 객체의 값을 나타냄
+
+
+
+## Number
+
+- 숫자 표현 시 사용하는 객체
+- 생성
+var number1 = 123;
+var number2 = new Number(123);
+- Object가 지원하는 7가지 메서드를 모두 제공하며 추가로 3가지의 메서드 제공
+
+- 메서드
+toExponential() : 숫자를 지수표기법으로 변환한 문자열로 리턴
+toFixed(x) : 숫자를 고정 소수점 표시로 변환한 문자열로 리턴(매개 변수로 입력된 x 만큼 소수점 자리를 나타냄)
+toPrecision(x) : 숫자를 길이에 따라 지수표기법 혹은 고정 소수점 표시로 변환한 문자열 리턴(매개변수로 입력된 x의 길이로 숫자를 나타냄)
+
+- 속성
+MAX_VALUE/MIN_VALUE : JavaScript에서 나타낼 수 있는 가장 큰/작은 숫자
+NEGATIVE_INFINITY/POSITIVE_INFINITY : 음/양의 무한대 숫자
+NaN : 숫자로 나타낼 수 없는 값
+prototype : 모든 Number 객체에 포함할 속성이나 메서드 추가 허용
+
+
+
+## String
+
+- 문자열 표현 시 사용하는 객체
+- 생성
+var string1 = 'abc';
+var string2 = new String('abc');
+
+- 메서드
+charAt(position) : 지정된 위치의 문자 리턴
+charCodeAt(position) : 지정된 위치의 문자의 Unicode 리턴
+concat() : 두 개 혹은 그 이상의 매개변수로 입력한 문자열을 이어서 리턴
+indexOf() : 문자열 내에서 일치하는 값의 위치를 앞에서부터 찾아 위치 리턴
+lastIndexOf() : 문자열 내에서 일치하는 값의 위치를 뒤에서부터 찾아 위치 리턴 검색은 뒤에서부터 하나, 위치는 문자열 시작 기준으로 리턴
+localeCompare() : 정렬 순서에 근거해 두 개의 문자열을 비교.
+str1.localeCompare(str2)의 형식으로 str1이 str2보다 앞서면 -1, 같으면 0, 뒤쳐지면 1
+match() : 문자열 내에 매개변수로 입력된 문자열 있는지 판독
+replace() : 문자열 내의 첫번째 매개변수로 입력된 문자열이 있는지 확인하고, 이를 두번째 매개변수로 입력된 문자열로 변경 후 리턴
+search() : 매개변수로 입력된 문자열과 일치하는 문자열의 위치 리턴
+slice() : 특정 위치의 문자열을 추출해 새로운 문자열 리턴
+split() : 매개변수로 입력된 것을 기준으로 문자열을 잘라서 리턴
+substr() : 첫번째 매개변수 위치에서 시작해 두번째 매개변수의 수만큼 문자열을 잘라 리턴
+substring() : 첫번째 매개변수 위치에서 시작해 두번째 매개변수의 위치까지 문자열을 잘라 리턴
+toLowerCase() : 문자열을 소문자로 변환, 리턴
+toUpperCase() : 문자열을 대문자로 변환, 리턴
+
+* HTML 관련 메서드가 존재하긴 하나, 표준화되지 않아, 브라우저에 따라서 원하는 결과를 얻지 못할 수도 있음.
+
+- 속성
+length : 문자열의 길이를 숫자로 반환
+prototype : 모든 String 객체에 포함할 속성이나 메서드 추가 허용
+
+
+
+## Array
+
+- 여러 자료를 쉽게 관리할 수 있게 도와주는 객체
+- 생성
+var array1 = [25,32,13];
+var array2 = new Array(); -> 빈 배열
+var array3 = new Array(5); -> 매개변수의 크기를 가지는 배열
+var array4 = new Array(25, 32, 13); -> 매개변수를 배열로 생성
+
+- 메서드
+concat() : 매개변수로 입력한 배열의 배열 요소를 모두 합쳐 새로운 배열로 만들어 리턴
+join() : 배열 안의 모든 배열 요소를 문자열로 만들어 리턴
+pop() : 배열의 마지막 요소를 제거하고, 제거된 배열 요소 리턴
+push() : 배열의 끝에 새로운 매개변수로 입력된 배열 요소 추가, 새로운 length 리턴
+reverse() : 배열 요소의 순서를 반대로
+shift() : 배열의 첫번째 배열 요소를 제거하고 제거된 배열 요소 리턴
+slice() : 배열 요소의 지정한 부분을 리턴
+sort() : 배열 요소 정렬
+splice() : 배열에서 배열 요소들을 추가하거나 제거, 제거된 배열요소는 리턴
+unshift() : 배열의 시작에 새로운 배열 요소를 추가하고, 새로운 배열 길이 리턴
+
+- 속성
+length : 배열의 길이를 리턴하거나 설정
+prototype : 모든 Array 객체에 포함할 속성이나 메서드 추가 허용
