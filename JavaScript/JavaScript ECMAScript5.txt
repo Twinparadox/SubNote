@@ -1,0 +1,9 @@
+### ECMAScript5
+
+- JavaScript의 표준화된 공식 명칭으로, 현재 5판이 발표된 상태로, 기존의 객체에 다양한 메서드 추가됨
+- 공식적으로는 ECMAScript가 JavaScript의 본 명칭임.
+- ECMAScript5는 IE8 이하를 지원하지 않음
+- Array 객체에 메서드가 추가됨
+
+* JSON : JavaScript Object Notation, JavaScript 객체의 형태를 가지는 문자열을 의미
+

@@ -101,8 +101,65 @@ shift() : 배열의 첫번째 배열 요소를 제거하고 제거된 배열 요소 리턴
 slice() : 배열 요소의 지정한 부분을 리턴
 sort() : 배열 요소 정렬
 splice() : 배열에서 배열 요소들을 추가하거나 제거, 제거된 배열요소는 리턴
+splice(index,howmany,item,item2,...)
+index : 제거하거나 추가할 배열 요소 위치로 숫자로 필수 입력
+howmany : 제거할 배열 요소의 개수 나타내며, 0 입력 시 제거하지 않음. 필수 입력
+item : 추가할 배열 요소 입력, 선택사항
 unshift() : 배열의 시작에 새로운 배열 요소를 추가하고, 새로운 배열 길이 리턴
 
 - 속성
 length : 배열의 길이를 리턴하거나 설정
 prototype : 모든 Array 객체에 포함할 속성이나 메서드 추가 허용
+
+
+
+## Date
+
+- 날짜와 시간을 표시하는 객체
+- 생성
+var date = new Date();
+var date = new Date('September 29, 2016 23:00:00');
+var date = new Date(3453);
+var date = new Date(2001,2,12)
+
+- 생성자 함수
+Date() : 현재 시간과 날짜를 가지는 객체 생성
+Date(dateString) : 특정한 시간과 날짜를 문자열을 배개변수로 입력해, 객체 생성, dateString(영어로 날짜와 시간 명시)
+Date(milliseconds) : 1970/1/1/00:00 기준으로 경과한 시간을 밀리초 단위로 계산해 객체 생성
+Date(year, month, day, hour, minutes, seconds, milliseconds) : 특정한 시간과 날짜를 7개의 숫자로 매개변수로 입력해 객체 생성, 매개변수의 개수는 지정하기 원하는 범위에 따라 다르며, 변수 순서로 입력
+
+- 메서드
+getDate(), setDate() : 1~31 date 리턴/설정
+getDay() : 0(Sunday)~6(Saturday) 요일 리턴
+getFullYear(), setFullYear() : 4자리 year 리턴/설정
+getHours(), setHours() : 0~23 hour 리턴/설정
+getMilliseconds(), setMilliseconds() : 0~999 ms 리턴/설정
+getMinutes(), setMinutes() : 0~59 minute 리턴/설정
+getMonth(), setMonth() : 0(Jan)~11(Dec) month 리턴/설정
+getSeconds(), setSeconds() : 0~59 second 리턴/설정
+getTime(), setTime() : 1970/1/1/00:00 기준으로 ms 리턴/설정
+toDateString() : 객체의 날짜 부분을 읽을 수 있는 문자열로 변환
+toLocaleDateString() : Locale 규칙을 이용해 객체의 날짜 부분을 읽을 수 있는 문자열로 변환
+toLocaleTimeString() : Locale 규칙을 이용해 객체의 시간 부분을 읽을 수 있는 문자열로 변환
+toLocaleString() : Locale 규칙을 이용해 객체를 문자열로 변환
+toString() : 객체를 문자열로 변환
+toTimeString() : 객체의 시간 부분을 문자열로 변환
+
+
+
+## Math
+- 수학과 관련된 속성과 메서드를 가짐
+- 생성자 함수를 사용하지 않음=바로 사용 가능
+
+- 속성
+E : 오일러 수
+LN2 : 2의 자연로그
+LN10 : 10의 자연로그
+LOG2E : log2(e)
+LOG10E : log10(e)
+PI : PI
+SQRT1_2 : sqrt(1/2)
+SQRT2 : sqrt(2)
+
+- 메서드
+삼각함수, 절대값, 최대/최소값, 제곱, 랜덤, 반올림 등 이용 가능
