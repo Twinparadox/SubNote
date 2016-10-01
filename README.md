@@ -7,4 +7,5 @@
 - PHP, MySQL : PHP, MySQL 관련 실습 내용 및 정리
 - SocketProgramming : 소켓 네트워크 프로그래밍 관련 내용 정리
 - SystemProgramming : 임베디드 시스템 프로그래밍 관련 내용 정리
+- Linux : 리눅스 관련 내용 정리
 - ETC : 분류 미정
