@@ -1,0 +1,31 @@
+<?php
+	if(!$enword) 
+	{
+		echo("
+		<script>window.alert('영어 단어가 입력되지 않았습니다.')
+		history.go(-1)
+		</script>");
+		exit;
+	}
+	if(!$koword)
+	{
+		echo("
+		<script>window.alert('단어 뜻이 입력되지 않았습니다.')
+		history.go(-1)
+		</script>");
+		exit;
+	}
+	
+	$host="localhost";
+	$adminID="root";
+	$adminPW="apmsetup";
+	$DB="tparadox";
+	
+	$con=mysql_connect($host,$adminID,$adminPW);
+	mysql_select_db($DB,$con);
+	
+	mysql_query("insert into wordbook(enword,koword) values('$enword', '$koword')",$con);
+	mysql_close($con);
+	
+	echo("<meta http-equiv='Refresh' content='0; url=wb-show.php'>");
+?>
