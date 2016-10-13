@@ -1,44 +1,44 @@
-IPv4
+ï»¿IPv4
 
-32bit ÁÖ¼ÒÃ¼°è
-Network ID¿Í Host ID·Î ±¸¼º.
-ÇöÀç´Â ´Ù¾çÇÑ ±â±â°¡ °íÀ¯ ÁÖ¼Ò°¡ ÇÊ¿äÇÏ¿© IPv6·Î ÀüÈ¯ÇÏ°í ÀÖÀ½
-Network ID¿Í Host ID¿¡ ÇÒ´çµÇ´Â ºñÆ® ±æÀÌ¿¡ µû¶ó Class ±¸ºÐ
-(A, B, C, D, E; Class E´Â ¿¹¾àµÇ¾î »ç¿ë ºÒ°¡)
-ÀÏºÎ IP ÁÖ¼Ò´Â Æ¯¼ö¸ñÀûÀ» À§ÇØ ¿¹¾àµÇ¾î ÀÖÀ½
+32bit ì£¼ì†Œì²´ê³„
+Network IDì™€ Host IDë¡œ êµ¬ì„±.
+í˜„ìž¬ëŠ” ë‹¤ì–‘í•œ ê¸°ê¸°ê°€ ê³ ìœ  ì£¼ì†Œê°€ í•„ìš”í•˜ì—¬ IPv6ë¡œ ì „í™˜í•˜ê³  ìžˆìŒ
+Network IDì™€ Host IDì— í• ë‹¹ë˜ëŠ” ë¹„íŠ¸ ê¸¸ì´ì— ë”°ë¼ Class êµ¬ë¶„
+(A, B, C, D, E; Class EëŠ” ì˜ˆì•½ë˜ì–´ ì‚¬ìš© ë¶ˆê°€)
+ì¼ë¶€ IP ì£¼ì†ŒëŠ” íŠ¹ìˆ˜ëª©ì ì„ ìœ„í•´ ì˜ˆì•½ë˜ì–´ ìžˆìŒ
 
-- ¼­ºê³Ý
+- ì„œë¸Œë„·
 
-¸¹Àº ±â±â¸¦ ¿¬°áÇÒ ¼ö ÀÖ´Â ³×Æ®¿öÅ©¸¦ ´Ù¼öÀÇ ÀÛÀº ³×Æ®¿öÅ©·Î ºÐÇÒ
-ÀÏ¹ÝÀûÀ¸·Î Class A, B ³×Æ®¿öÅ© ´ë»ó
-ºÐ¸®µÈ ³×Æ®¿öÅ©´Â º°µµÀÇ ¸ÁÀÌ µÇ¾î ´Ù¸¥ °÷¿¡¼­ ÀÌ¿ë °¡´É
+ë§Žì€ ê¸°ê¸°ë¥¼ ì—°ê²°í•  ìˆ˜ ìžˆëŠ” ë„¤íŠ¸ì›Œí¬ë¥¼ ë‹¤ìˆ˜ì˜ ìž‘ì€ ë„¤íŠ¸ì›Œí¬ë¡œ ë¶„í• 
+ì¼ë°˜ì ìœ¼ë¡œ Class A, B ë„¤íŠ¸ì›Œí¬ ëŒ€ìƒ
+ë¶„ë¦¬ëœ ë„¤íŠ¸ì›Œí¬ëŠ” ë³„ë„ì˜ ë§ì´ ë˜ì–´ ë‹¤ë¥¸ ê³³ì—ì„œ ì´ìš© ê°€ëŠ¥
 
-Network ID¿Í ¼­ºê³Ý ¹øÈ£¿¡ ÇØ´çÇÏ´Â ºÎºÐÀº 1·Î ¸¶½ºÅ©¸¦ ±¸¼º
-Host ID¿¡ ÇØ´çÇÏ´Â ºÎºÐÀº 0À¸·Î ±¸¼º
+Network IDì™€ ì„œë¸Œë„· ë²ˆí˜¸ì— í•´ë‹¹í•˜ëŠ” ë¶€ë¶„ì€ 1ë¡œ ë§ˆìŠ¤í¬ë¥¼ êµ¬ì„±
+Host IDì— í•´ë‹¹í•˜ëŠ” ë¶€ë¶„ì€ 0ìœ¼ë¡œ êµ¬ì„±
 
-Internet Protocol Version 4¸¦ ¼±ÅÃÇØ ¼³Á¤ °¡´É
+Internet Protocol Version 4ë¥¼ ì„ íƒí•´ ì„¤ì • ê°€ëŠ¥
 
 
 
 
 IPv6
 
-128bit ÁÖ¼ÒÃ¼°è
-±âÁ¸ ¼ÒÇÁÆ®¿þ¾î, À¥¼­¹ö, ¸Þ½ÅÀú µîÀÌ º¸¿ÏÇØ¾ß ÇÔ
-±¹³» ÀÎÅÍ³Ý¸Á ±¸¼ºÇÏ´Â ³×Æ®¿öÅ© ÀåºñµéÀº IPv6 Áö¿ø ¿Ï·á
+128bit ì£¼ì†Œì²´ê³„
+ê¸°ì¡´ ì†Œí”„íŠ¸ì›¨ì–´, ì›¹ì„œë²„, ë©”ì‹ ì € ë“±ì´ ë³´ì™„í•´ì•¼ í•¨
+êµ­ë‚´ ì¸í„°ë„·ë§ êµ¬ì„±í•˜ëŠ” ë„¤íŠ¸ì›Œí¬ ìž¥ë¹„ë“¤ì€ IPv6 ì§€ì› ì™„ë£Œ
 
-'001'·Î ½ÃÀÛÇÏ´Â Unicast Address
-¾î´À ±â±â¿Íµµ ¿¬°áÀÌ °¡´É
-TLA : Top Level Aggregator ID, ÃÖ»óÀ§ ¶ó¿ìÆÃ °èÃþ ±¸Á¶ ½Äº°ÀÚ [±¹°¡, ±Û·Î¹ú ISP ½Äº°]
-Res : ¿¹¾àµÊ (¹Ì»ç¿ë)
-NLA : Next Level Aggregator ID, Æ¯Á¤ »çÀÌÆ® ±¸ºÐ
-SLA : Site Level Aggregator ID, »çÀÌÆ® °¡Áø ±â°ü¿¡¼­ ¼­ºê³Ý ½Äº° ½Ã »ç¿ë
-Interface ID : ¼­ºê³Ý ³» È£½ºÆ® ½Äº°, IPv4ÀÇ Host ID¿Í À¯»ç
+'001'ë¡œ ì‹œìž‘í•˜ëŠ” Unicast Address
+ì–´ëŠ ê¸°ê¸°ì™€ë„ ì—°ê²°ì´ ê°€ëŠ¥
+TLA : Top Level Aggregator ID, ìµœìƒìœ„ ë¼ìš°íŒ… ê³„ì¸µ êµ¬ì¡° ì‹ë³„ìž [êµ­ê°€, ê¸€ë¡œë²Œ ISP ì‹ë³„]
+Res : ì˜ˆì•½ë¨ (ë¯¸ì‚¬ìš©)
+NLA : Next Level Aggregator ID, íŠ¹ì • ì‚¬ì´íŠ¸ êµ¬ë¶„
+SLA : Site Level Aggregator ID, ì‚¬ì´íŠ¸ ê°€ì§„ ê¸°ê´€ì—ì„œ ì„œë¸Œë„· ì‹ë³„ ì‹œ ì‚¬ìš©
+Interface ID : ì„œë¸Œë„· ë‚´ í˜¸ìŠ¤íŠ¸ ì‹ë³„, IPv4ì˜ Host IDì™€ ìœ ì‚¬
 
 
-'1111 1111'·Î ½ÃÀÛÇÏ´Â Multicast Address
-Multicast Routing Topology¸¦ ÀÌ¿ë, Multicast Address·Î ½Äº°µÇ´Â ¸ðµç ÀÎÅÍÆäÀÌ½º·Î Àü´Þ
-Flags : '0' ¿µ±¸Àû Multicast Address / '1' ÀÓ½Ã Multicast Address
+'1111 1111'ë¡œ ì‹œìž‘í•˜ëŠ” Multicast Address
+Multicast Routing Topologyë¥¼ ì´ìš©, Multicast Addressë¡œ ì‹ë³„ë˜ëŠ” ëª¨ë“  ì¸í„°íŽ˜ì´ìŠ¤ë¡œ ì „ë‹¬
+Flags : '0' ì˜êµ¬ì  Multicast Address / '1' ìž„ì‹œ Multicast Address
 Scope : '1':Local Node, '2':Local Link, '5':Local Site, '8':Local Group, 'E':Global
 Group ID : Multicast Group ID
 

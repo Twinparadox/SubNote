@@ -1,14 +1,14 @@
-typedef struct sockaddr {
+ï»¿typedef struct sockaddr {
 u_short sa_family;
 char sa_data[14];
 } SOCKADDR;
 
 sa_family
-ÁÖ¼Ò Ã¼°è¸¦ ³ªÅ¸³»´Â 16bit value
+ì£¼ì†Œ ì²´ê³„ë¥¼ ë‚˜íƒ€ë‚´ëŠ” 16bit value
 ex) TCP/IP Protocol, AF_INET or AF_INET6
 
 sa_data
-ÇØ´ç ÁÖ¼Ò Ã¼°è¿¡¼­ »ç¿ëÇÒ ÁÖ¼Ò Á¤º¸
+í•´ë‹¹ ì£¼ì†Œ ì²´ê³„ì—ì„œ ì‚¬ìš©í•  ì£¼ì†Œ ì •ë³´
 ex) TCP/IP Protocol IP Address and Port
 
 TCP/IP -> SOCKADDR_IN{} or SOCKADDR_IN6{}
@@ -54,10 +54,10 @@ u_short Word[8];
 } IN6_ADDR;
 
 IN_ADDR struct
-sockaddr_in ±¸Á¶Ã¼´Â socket programming address ÀúÀåÇÏ±â À§ÇØ »ç¿ë
-bind()ÇÔ¼ö¿Í °°ÀÌ ÀÎÀÚ·Î ÁÖ¼Ò¸¦ ¿ä±¸ÇÒ °æ¿ì »ç¿ë
+sockaddr_in êµ¬ì¡°ì²´ëŠ” socket programming address ì €ì¥í•˜ê¸° ìœ„í•´ ì‚¬ìš©
+bind()í•¨ìˆ˜ì™€ ê°™ì´ ì¸ìë¡œ ì£¼ì†Œë¥¼ ìš”êµ¬í•  ê²½ìš° ì‚¬ìš©
 
-±¸Á¶Ã¼¿Í ±× Å©±â(Byte)
+êµ¬ì¡°ì²´ì™€ ê·¸ í¬ê¸°(Byte)
 SOCKADDR 16
 SOCKADDR_IN 16
 SOCKADDR_IN6 28

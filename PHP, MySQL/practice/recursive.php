@@ -1,4 +1,4 @@
-<?
+﻿<?
 	Function Test()
 	{
 		static $count=0;

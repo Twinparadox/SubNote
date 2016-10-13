@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 	$host="localhost";
 	$ID="root";
 	$PW="apmsetup";

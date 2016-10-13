@@ -1,38 +1,38 @@
-ARM Mode(7°¡Áö)
+ï»¿ARM Mode(7ê°€ì§€)
 
 Processor Mode
 
 
 User
-- À¯ÀÏÇÑ unpriviledged mode
-- ¸Þ¸ð¸®, I/O ÀåÄ¡ µîÀÇ ÀÚ¿ø Á¢±ÙÀÌ Á¦ÇÑÀû
-- ÀÀ¿ë ÇÁ·Î±×·¥, user task°¡ ÀÛµ¿µÇ´Â ¸ðµå
-- ¿¹¿Ü ¹ß»ý ½Ã¸¦ Á¦¿ÜÇÏ°í ¸ðµå ÀüÈ¯ ºÒ´É
+- ìœ ì¼í•œ unpriviledged mode
+- ë©”ëª¨ë¦¬, I/O ìž¥ì¹˜ ë“±ì˜ ìžì› ì ‘ê·¼ì´ ì œí•œì 
+- ì‘ìš© í”„ë¡œê·¸ëž¨, user taskê°€ ìž‘ë™ë˜ëŠ” ëª¨ë“œ
+- ì˜ˆì™¸ ë°œìƒ ì‹œë¥¼ ì œì™¸í•˜ê³  ëª¨ë“œ ì „í™˜ ë¶ˆëŠ¥
 
 FIQ
-- ºü¸¥ ÀÎÅÍ·´Æ® Ã³¸® À§ÇÑ ·¹Áö½ºÅÍ r8r-12 °¡Áü
-- ¸ðµå ÀüÈ¯ ½Ã, ¹®¸Æ ±³È¯À¸·Î ÀÎÇÑ ¿À¹öÇìµå¸¦ ÁÙÀÌ±â À§ÇØ Àü¿ë ·¹Áö½ºÅÍ¸¦ µÎ¾î µ¥ÀÌÅÍ º¸°ü
+- ë¹ ë¥¸ ì¸í„°ëŸ½íŠ¸ ì²˜ë¦¬ ìœ„í•œ ë ˆì§€ìŠ¤í„° r8r-12 ê°€ì§
+- ëª¨ë“œ ì „í™˜ ì‹œ, ë¬¸ë§¥ êµí™˜ìœ¼ë¡œ ì¸í•œ ì˜¤ë²„í—¤ë“œë¥¼ ì¤„ì´ê¸° ìœ„í•´ ì „ìš© ë ˆì§€ìŠ¤í„°ë¥¼ ë‘ì–´ ë°ì´í„° ë³´ê´€
 
 IRQ
-- ÀÏ¹ÝÀû ÀÎÅÍ·´Æ® Ã³¸®
+- ì¼ë°˜ì  ì¸í„°ëŸ½íŠ¸ ì²˜ë¦¬
 
 Supervisor
-- OS, Kernel Task, Device Driver ½ÇÇàµÇ´Â ¸ðµå
-- ÀÚ½ÅÀÇ ÀÚ¿ø »Ó ¾Æ´Ï¶ó ÀüÃ¼ ÀÚ¿ø °ü¸®
-- SWI°¡ ¹ß»ý ½Ã ÀüÈ¯µÊ
+- OS, Kernel Task, Device Driver ì‹¤í–‰ë˜ëŠ” ëª¨ë“œ
+- ìžì‹ ì˜ ìžì› ë¿ ì•„ë‹ˆë¼ ì „ì²´ ìžì› ê´€ë¦¬
+- SWIê°€ ë°œìƒ ì‹œ ì „í™˜ë¨
 
 Abort
-- ¸Þ¸ð¸® °ü·Ã ÀÛ¾÷ Áß ¿À·ù ¹ß»ý ½Ã ÀüÈ¯
+- ë©”ëª¨ë¦¬ ê´€ë ¨ ìž‘ì—… ì¤‘ ì˜¤ë¥˜ ë°œìƒ ì‹œ ì „í™˜
 
 Undefined
-- ÇÁ·Î¼¼¼­¿¡ Á¤ÀÇµÇÁö ¾ÊÀº ¸í·ÉÀ» ÀÐ¾î ¿Í ½ÇÇàÇÏ·Á°í ÇÏ¸é ÀüÈ¯
+- í”„ë¡œì„¸ì„œì— ì •ì˜ë˜ì§€ ì•Šì€ ëª…ë ¹ì„ ì½ì–´ ì™€ ì‹¤í–‰í•˜ë ¤ê³  í•˜ë©´ ì „í™˜
 
 System
-- User ¸ðµå¿Í ¿ëµµ¿Í »ç¿ë ·¹Áö½ºÅÍ µ¿ÀÏ
-- Privileged ¸ðµå·Î ½Ã½ºÅÛ ÀÚ¿ø Á¢±Ù Á¦ÇÑ ¾øÀ½
-- User ¸ðµåÀÇ ÀÚ¿ø Á¢±Ù Á¦ÇÑÀ» ¸ðµå ÀüÈ¯À» ÀÌ¿ëÇØ ÀÚ¿ø¿¡ Á¢±ÙÇÒ ¼ö ÀÖ°Ô Çã¶ô
-- OSÀÇ Task¿¡ ÀÇÇØ ÇÒ´ç
+- User ëª¨ë“œì™€ ìš©ë„ì™€ ì‚¬ìš© ë ˆì§€ìŠ¤í„° ë™ì¼
+- Privileged ëª¨ë“œë¡œ ì‹œìŠ¤í…œ ìžì› ì ‘ê·¼ ì œí•œ ì—†ìŒ
+- User ëª¨ë“œì˜ ìžì› ì ‘ê·¼ ì œí•œì„ ëª¨ë“œ ì „í™˜ì„ ì´ìš©í•´ ìžì›ì— ì ‘ê·¼í•  ìˆ˜ ìžˆê²Œ í—ˆë½
+- OSì˜ Taskì— ì˜í•´ í• ë‹¹
 
 
--> µ¿ÀÏÇÑ ÀÌ¸§ÀÇ ¿¹¿Ü ¹ß»ý ½Ã, ÇØ´ç ¸ðµå·Î ÀüÈ¯
--> °¢ ¸ðµåµéÀº ¿¹¿Ü ¸ðµå·Î ÀüÈ¯µÇ±â ÀÌÀüÀÇ »óÅÂ À¯Áö À§ÇØ ¹ü¿ë ÀÌ¿ÜÀÇ Ãß°¡ÀûÀÎ ·¹Áö½ºÅÍ¸¦ °¡Áü
+-> ë™ì¼í•œ ì´ë¦„ì˜ ì˜ˆì™¸ ë°œìƒ ì‹œ, í•´ë‹¹ ëª¨ë“œë¡œ ì „í™˜
+-> ê° ëª¨ë“œë“¤ì€ ì˜ˆì™¸ ëª¨ë“œë¡œ ì „í™˜ë˜ê¸° ì´ì „ì˜ ìƒíƒœ ìœ ì§€ ìœ„í•´ ë²”ìš© ì´ì™¸ì˜ ì¶”ê°€ì ì¸ ë ˆì§€ìŠ¤í„°ë¥¼ ê°€ì§

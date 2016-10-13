@@ -1,55 +1,55 @@
-1. »ç¿ëÀÚ·ÎºÎÅÍ ¹®ÀÚ¿­ ÀÔ·Â
-2. ÀÔ·ÂµÈ ¹®ÀÚ¿­À» ¿¬°áµÈ ¼ÒÄÏÀ» ÅëÇØ ¼Û½Å
-3. ¼ÒÄÏÀ» ÅëÇØ ¼Û½ÅµÈ ¹®ÀÚ¿­ ¼ö½Å
-4. ¼ö½ÅÇÑ ¹®ÀÚ¿­À» È­¸é¿¡ Ãâ·Â
-5. Á¤»ó ¼ö½ÅµÇ¾úÀ½À» ¸Þ¼¼Áö·Î ¼Û½Å
-6. ¼ÒÄÏÀ» ÅëÇØ ¼Û½ÅµÈ ¸Þ¼¼Áö¸¦ ¼ö½ÅÇÔ
-7. ¼ö½ÅµÈ ¸Þ¼¼Áö¸¦ Ãâ·Â
+ï»¿1. ì‚¬ìš©ìžë¡œë¶€í„° ë¬¸ìžì—´ ìž…ë ¥
+2. ìž…ë ¥ëœ ë¬¸ìžì—´ì„ ì—°ê²°ëœ ì†Œì¼“ì„ í†µí•´ ì†¡ì‹ 
+3. ì†Œì¼“ì„ í†µí•´ ì†¡ì‹ ëœ ë¬¸ìžì—´ ìˆ˜ì‹ 
+4. ìˆ˜ì‹ í•œ ë¬¸ìžì—´ì„ í™”ë©´ì— ì¶œë ¥
+5. ì •ìƒ ìˆ˜ì‹ ë˜ì—ˆìŒì„ ë©”ì„¸ì§€ë¡œ ì†¡ì‹ 
+6. ì†Œì¼“ì„ í†µí•´ ì†¡ì‹ ëœ ë©”ì„¸ì§€ë¥¼ ìˆ˜ì‹ í•¨
+7. ìˆ˜ì‹ ëœ ë©”ì„¸ì§€ë¥¼ ì¶œë ¥
 
 
-- ¼ÒÄÏ Åë½ÅÀ» À§ÇØ¼­´Â Åë½Å¿¡ »ç¿ëÇÒ ÇÁ·ÎÅäÄÝ ÁöÁ¤ÇØ¾ß
-- ÀÌ¸¦ À§ÇØ Áö¿ª(ÀÚ½Å)ÀÇ IP Address/Port Number, ¿ø°Ý(»ó´ë¹æ) IP Address/Port Number Á¤º¸°¡ ÇÊ¿ä
+- ì†Œì¼“ í†µì‹ ì„ ìœ„í•´ì„œëŠ” í†µì‹ ì— ì‚¬ìš©í•  í”„ë¡œí† ì½œ ì§€ì •í•´ì•¼
+- ì´ë¥¼ ìœ„í•´ ì§€ì—­(ìžì‹ )ì˜ IP Address/Port Number, ì›ê²©(ìƒëŒ€ë°©) IP Address/Port Number ì •ë³´ê°€ í•„ìš”
 
 
 connect Function
 
-¼­¹ö¿Í Åë½ÅÀ» À§ÇÑ ¿¬°á(¼¼¼Ç)À» »ý¼º
-¿¬°áÇÒ ¼­¹öÀÇ ÁÖ¼Ò Á¤º¸¸¦ ¼³Á¤ÇØ¾ß ÇÔ
+ì„œë²„ì™€ í†µì‹ ì„ ìœ„í•œ ì—°ê²°(ì„¸ì…˜)ì„ ìƒì„±
+ì—°ê²°í•  ì„œë²„ì˜ ì£¼ì†Œ ì •ë³´ë¥¼ ì„¤ì •í•´ì•¼ í•¨
 
 int connect(int sockfd, const struct sockaddr* addr, socklen_t addrlen);
 return 0(success), -1(fail)
 
-- sockfd : ¼­¹ö¿¡ ¿¬°á ¿äÃ»ÇÏ±â À§ÇÑ Å¬¶óÀÌ¾ðÆ® ¼ÒÄÏ µð½ºÅ©¸³ÅÍ
-- addr : ¿¬°áÇÒ ¼­¹öÀÇ ÁÖ¼Ò Á¤º¸°¡ ¼³Á¤µÈ ±¸Á¶Ã¼
-- addrlen : addrÀÇ Å©±â
+- sockfd : ì„œë²„ì— ì—°ê²° ìš”ì²­í•˜ê¸° ìœ„í•œ í´ë¼ì´ì–¸íŠ¸ ì†Œì¼“ ë””ìŠ¤í¬ë¦½í„°
+- addr : ì—°ê²°í•  ì„œë²„ì˜ ì£¼ì†Œ ì •ë³´ê°€ ì„¤ì •ëœ êµ¬ì¡°ì²´
+- addrlen : addrì˜ í¬ê¸°
 
 
 
 read Function
 
-Àü¼ÛµÈ ¸Þ¼¼Áö¸¦ ¼ö½ÅÇÏ±â À§ÇØ »ç¿ë
-LINUX¿¡¼­´Â ¼ÒÄÏÀÌ³ª ÆÄÀÏÀ» µ¿ÀÏÇÑ Å¸ÀÔÀÇ µð½ºÅ©¸³ÅÍ·Î Á¤ÀÇÇÏ¹Ç·Î µ¥ÀÌÅÍ ¼ö½ÅÇÒ ¶§ »ç¿ë °¡´É
+ì „ì†¡ëœ ë©”ì„¸ì§€ë¥¼ ìˆ˜ì‹ í•˜ê¸° ìœ„í•´ ì‚¬ìš©
+LINUXì—ì„œëŠ” ì†Œì¼“ì´ë‚˜ íŒŒì¼ì„ ë™ì¼í•œ íƒ€ìž…ì˜ ë””ìŠ¤í¬ë¦½í„°ë¡œ ì •ì˜í•˜ë¯€ë¡œ ë°ì´í„° ìˆ˜ì‹ í•  ë•Œ ì‚¬ìš© ê°€ëŠ¥
 
 ssize_t read(int fd, void* buf, size_t nbytes);
-¼º°ø : ÀÐÀº µ¥ÀÌÅÍÀÇ Å©±â(byte)
-½ÇÆÐ : -1
+ì„±ê³µ : ì½ì€ ë°ì´í„°ì˜ í¬ê¸°(byte)
+ì‹¤íŒ¨ : -1
 
-- fd : µ¥ÀÌÅÍ¸¦ ÀÐÀ» ¼ÒÄÏ or ÆÄÀÏ µð½ºÅ©¸³ÅÍ
-- buf : ÇÔ¼ö¿¡ ÀÇÇØ ÀÐÇôÁú µ¥ÀÌÅÍ°¡ ÀúÀåµÉ bufferÀÇ Æ÷ÀÎÅÍ
-- nbytes : ÇÔ¼ö È£Ãâ ½Ã, ÀÐ°íÀÚÇÏ´Â µ¥ÀÌÅÍÀÇ Å©±â(byte)
+- fd : ë°ì´í„°ë¥¼ ì½ì„ ì†Œì¼“ or íŒŒì¼ ë””ìŠ¤í¬ë¦½í„°
+- buf : í•¨ìˆ˜ì— ì˜í•´ ì½í˜€ì§ˆ ë°ì´í„°ê°€ ì €ìž¥ë  bufferì˜ í¬ì¸í„°
+- nbytes : í•¨ìˆ˜ í˜¸ì¶œ ì‹œ, ì½ê³ ìží•˜ëŠ” ë°ì´í„°ì˜ í¬ê¸°(byte)
 
 
 
 
 write Function
 
-¸Þ¼¼Áö¸¦ ¼Û½ÅÇÏ±â À§ÇØ »ç¿ë
-LINUX¿¡¼­´Â ¼ÒÄÏÀÌ³ª ÆÄÀÏÀ» µ¿ÀÏÇÑ Å¸ÀÔÀÇ µð½ºÅ©¸³ÅÍ·Î Á¤ÀÇÇÏ¹Ç·Î µ¥ÀÌÅÍ Àü¼ÛÇÒ ¶§ »ç¿ë °¡´É
+ë©”ì„¸ì§€ë¥¼ ì†¡ì‹ í•˜ê¸° ìœ„í•´ ì‚¬ìš©
+LINUXì—ì„œëŠ” ì†Œì¼“ì´ë‚˜ íŒŒì¼ì„ ë™ì¼í•œ íƒ€ìž…ì˜ ë””ìŠ¤í¬ë¦½í„°ë¡œ ì •ì˜í•˜ë¯€ë¡œ ë°ì´í„° ì „ì†¡í•  ë•Œ ì‚¬ìš© ê°€ëŠ¥
 
 ssize_t write(int fd, const void* buf, size_t nbytes);
-¼º°ø : ÀÐÀº µ¥ÀÌÅÍÀÇ Å©±â(byte)
-½ÇÆÐ : -1
+ì„±ê³µ : ì½ì€ ë°ì´í„°ì˜ í¬ê¸°(byte)
+ì‹¤íŒ¨ : -1
 
-- fd : µ¥ÀÌÅÍ¸¦ Àü¼ÛÇÒ ¼ÒÄÏ or ÆÄÀÏ ½ºÅ©¸³ÅÍ
-- buf : Àü¼ÛÇÒ µ¥ÀÌÅÍ¸¦ °¡Áö°í ÀÖ´Â bufferÀÇ Æ÷ÀÎÅÍ
-- nbytes : Àü¼ÛÇÒ µ¥ÀÌÅÍÀÇ Å©±â(byte)
+- fd : ë°ì´í„°ë¥¼ ì „ì†¡í•  ì†Œì¼“ or íŒŒì¼ ìŠ¤í¬ë¦½í„°
+- buf : ì „ì†¡í•  ë°ì´í„°ë¥¼ ê°€ì§€ê³  ìžˆëŠ” bufferì˜ í¬ì¸í„°
+- nbytes : ì „ì†¡í•  ë°ì´í„°ì˜ í¬ê¸°(byte)

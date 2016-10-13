@@ -1,4 +1,4 @@
-<?php
+О╩©<?php
 	$host="localhost";
 	$ID="root";
 	$PW="apmsetup";
@@ -12,9 +12,9 @@
 			</script>");
 	}
 	if(!$wname)
-		check("юл╦╖ю╩ ют╥бго╪╪©Д");
+		check("Л²╢К╕└Л²└ Л·┘К═╔М∙≤Л└╦Л ■");
 	if(!$wmemo)
-		check("Ё╩©Кю╩ ют╥бго╪╪©Д");
+		check("К┌╢Л ╘Л²└ Л·┘К═╔М∙≤Л└╦Л ■");
 
 
 	

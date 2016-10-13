@@ -1,8 +1,8 @@
-### C Program Type Qualifier
+ï»¿### C Program Type Qualifier
 
 ## Volatile
 
-Ä³½Ã¸¦ »ç¿ëÇÏÁö ¾ÊÀ½(no-cache)
+ìºì‹œë¥¼ ì‚¬ìš©í•˜ì§€ ì•ŠìŒ(no-cache)
 
 #define GPECON (*(volatile unsigned int*)0x56000040)
 #define GPEDAT (*(volatile unsigned int*)0x56000044)
@@ -11,6 +11,6 @@
 
 ## const
 
-º¯¼ö¸¦ »ó¼öÈ­ÇÏ´Â ÇÑÁ¤ÀÚ
-ÇÑ ¹®Àå¿¡ ¿©·¯¹ø »ç¿ëµÉ ¼ö ÀÖ°í, À§Ä¡¿¡ µû¶ó ÀÇ¹Ì°¡ ´Þ¶óÁü
-°ªÀÌ ¹Ù²î¾î¼­´Â ¾ÈµÉ º¯¼ö¿¡ ÁöÁ¤, º¸Åë ¶óÀÌºê·¯¸® ÇÔ¼ö¿¡¼­ ¸¹ÀÌ »ç¿ë
+ë³€ìˆ˜ë¥¼ ìƒìˆ˜í™”í•˜ëŠ” í•œì •ìž
+í•œ ë¬¸ìž¥ì— ì—¬ëŸ¬ë²ˆ ì‚¬ìš©ë  ìˆ˜ ìžˆê³ , ìœ„ì¹˜ì— ë”°ë¼ ì˜ë¯¸ê°€ ë‹¬ë¼ì§
+ê°’ì´ ë°”ë€Œì–´ì„œëŠ” ì•ˆë  ë³€ìˆ˜ì— ì§€ì •, ë³´í†µ ë¼ì´ë¸ŒëŸ¬ë¦¬ í•¨ìˆ˜ì—ì„œ ë§Žì´ ì‚¬ìš©

@@ -1,14 +1,14 @@
-<?php
+ï»¿<?php
 	function check($message) {
 		echo ("<script>window.alert(\"$message\");history.go(-1);</script>");
 		exit;
 	}
 	
-	if(!$wname) check("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä");
-	if(!$wmemo) check("³»¿ëÀ» ÀÔ·ÂÇÏ¼¼¿ä");
+	if(!$wname) check("ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”");
+	if(!$wmemo) check("ë‚´ìš©ì„ ì…ë ¥í•˜ì„¸ìš”");
 	
 	$con=mysql_connect("localhost","root","password");
-	if(!$con) die('DB Á¢¼Ó ½ÇÆĞ'.mysql_error());
+	if(!$con) die('DB ì ‘ì† ì‹¤íŒ¨'.mysql_error());
 	
 	mysql_set_charset("utf8",$con);
 	mysql_select_db("tparadox",$con);

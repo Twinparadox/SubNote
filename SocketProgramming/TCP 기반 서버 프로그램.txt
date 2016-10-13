@@ -1,7 +1,7 @@
-err_handler.h
+ï»¿err_handler.h
 
-TCP ±â¹Ý ¼­¹ö-Å¬¶óÀÌ¾ðÆ® ÇÁ·Î±×·¥ ¿¹Á¦¿¡¼­
-¿À·ù ¸Þ¼¼Áö Ãâ·Â À§ÇØ ÇÔ¼ö Á¤ÀÇ Çì´õÆÄÀÏ
+TCP ê¸°ë°˜ ì„œë²„-í´ë¼ì´ì–¸íŠ¸ í”„ë¡œê·¸ëž¨ ì˜ˆì œì—ì„œ
+ì˜¤ë¥˜ ë©”ì„¸ì§€ ì¶œë ¥ ìœ„í•´ í•¨ìˆ˜ ì •ì˜ í—¤ë”íŒŒì¼
 
 void err_handler(const char* msg)
 {
@@ -13,7 +13,7 @@ exit(1);
 
 echo_server.c
 
-Å¬¶óÀÌ¾ðÆ®¿¡¼­ Àü´ÞµÈ ¸Þ¼¼Áö¸¦ È­¸é¿¡ ±×´ë·Î Ãâ·Â
+í´ë¼ì´ì–¸íŠ¸ì—ì„œ ì „ë‹¬ëœ ë©”ì„¸ì§€ë¥¼ í™”ë©´ì— ê·¸ëŒ€ë¡œ ì¶œë ¥
 
 #include <sys/types.h>
 #include <sys/socket.h>

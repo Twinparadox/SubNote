@@ -1,4 +1,4 @@
-<?php
+ï»¿<?php
 	$host="localhost";
 	$ID="root";
 	$PW="apmsetup";
@@ -9,46 +9,46 @@
 	$result=mysql_query("select * from household order by date",$con);
 	$total=mysql_num_rows($result);
 	
-	// ÀÛ¼ºµÈ °¡°èºÎ ÀÖ´ÂÁö È®ÀÎ
+	// ì‘ì„±ëœ ê°€ê³„ë¶€ ìˆëŠ”ì§€ í™•ì¸
 	if(!total)
-		echo("¾ÆÁ÷ ÀÛ¼ºµÈ ³»¿ªÀÌ ¾÷½À´Ï´Ù.");
+		echo("ì•„ì§ ì‘ì„±ëœ ë‚´ì—­ì´ ì—…ìŠµë‹ˆë‹¤.");
 	else
 	{
-		// Ç¥ ÀÛ¼º
+		// í‘œ ì‘ì„±
 		echo("
 			<table border=1 width=850 style=border-collapse:collapse>
 			<tr align=center>
-				<td>³¯Â¥</td>
-				<td>¼öÀÔ/ÁöÃâ³»¿ª</td>
-				<td>¼öÀÔ(¿ø)</td>
-				<td>ÁöÃâ(¿ø)</td>
-				<td>ÀÜ¾×(¿ø)</td>
-				<td>¼öÁ¤/»èÁ¦</td>
+				<td>ë‚ ì§œ</td>
+				<td>ìˆ˜ì…/ì§€ì¶œë‚´ì—­</td>
+				<td>ìˆ˜ì…(ì›)</td>
+				<td>ì§€ì¶œ(ì›)</td>
+				<td>ì”ì•¡(ì›)</td>
+				<td>ìˆ˜ì •/ì‚­ì œ</td>
 			</tr>
 		");
-			// ÃÑ¼öÀÔ, ÃÑÁöÃâ, ÀÜ¾× °è»ê À§ÇÑ º¯¼ö ¼±¾ğ
+			// ì´ìˆ˜ì…, ì´ì§€ì¶œ, ì”ì•¡ ê³„ì‚° ìœ„í•œ ë³€ìˆ˜ ì„ ì–¸
 			$i=0;
 			$balance=0;
 			$total_income=0;
 			$total_expense=0;
-			// Ãâ·ÂºÎ
+			// ì¶œë ¥ë¶€
 			while($i<$total) :
-				// ÀÌÀü ³¯Â¥ ÀÌ¿ëÇØ ³¯Â¥°¡ ´Ş¶óÁö´ÂÁö È®ÀÎÇÏ±â À§ÇØ ¹®ÀÚ¿­ ÃßÃâ
+				// ì´ì „ ë‚ ì§œ ì´ìš©í•´ ë‚ ì§œê°€ ë‹¬ë¼ì§€ëŠ”ì§€ í™•ì¸í•˜ê¸° ìœ„í•´ ë¬¸ìì—´ ì¶”ì¶œ
 				$wdate=mysql_result($result,$i,"date");
 				$showdate=substr($wdate,0,10);
 				if($i>0)
 					$beforedate=substr(mysql_result($result,$i-1,"date"),0,10);
-				// ³»¿ë¹° ÀúÀå
+				// ë‚´ìš©ë¬¼ ì €ì¥
 				$wcontent=mysql_result($result,$i,"content");
 				$wincome=mysql_result($result,$i,"income");
 				$wexpense=mysql_result($result,$i,"expense");
-				// ÀÜ¾×, ÃÑ¼öÀÔ, ÃÑÁöÃâ °è»ê
+				// ì”ì•¡, ì´ìˆ˜ì…, ì´ì§€ì¶œ ê³„ì‚°
 				$balance=$balance+$wincome-$wexpense;
 				$total_income=$total_income+$wincome;
 				$total_expense=$total_expense+$wexpense;
 				
 				echo("<tr align=center>");		
-				// °°Àº ³¯ÀÎÁö È®ÀÎ
+				// ê°™ì€ ë‚ ì¸ì§€ í™•ì¸
 				if($showdate==$beforedate)
 				{
 					echo("<td></td>");
@@ -57,7 +57,7 @@
 				{
 					echo("<td>$showdate</td>");					
 				}
-				// ³»¿ë Ãâ·Â
+				// ë‚´ìš© ì¶œë ¥
 				echo("
 					<td>$content</td>
 					<td>$wincome</td>
@@ -70,11 +70,11 @@
 				$i++;
 			endwhile;
 		echo("</table>");
-		// ÃÖÁ¾ Ãâ·Â
-		echo("¼öÀÔ ÃÑ¾× : $total_income");
-		echo("¿ø");
-		echo("ÁöÃâ ÃÑ¾× : $total_expense");
-		echo("¿ø");
-		echo("ÀÜ¾× : $balance");
+		// ìµœì¢… ì¶œë ¥
+		echo("ìˆ˜ì… ì´ì•¡ : $total_income");
+		echo("ì›");
+		echo("ì§€ì¶œ ì´ì•¡ : $total_expense");
+		echo("ì›");
+		echo("ì”ì•¡ : $balance");
 	}
 ?>

@@ -1,4 +1,4 @@
-<?
+﻿<?
 // using MySQL DB table
 // Connect to DB
 	$con = mysql_connect("localhost","root","apmsetup");

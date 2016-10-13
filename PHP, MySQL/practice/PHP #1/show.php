@@ -1,4 +1,4 @@
-<?
+ï»¿<?
 	$host="localhost";
 	$ID="root";
 	$PW="apmsetup";
@@ -15,7 +15,7 @@
 	
 	echo ("
 		<table border=1 style=border-collapse:collapse>
-			<tr align=center><td width=100>ÀÌ¸§</td><td width=200>ÇÐ¹ø</td><td width=50>±¹¾î</td><td width=50>¿µ¾î</td><td width=50>¼öÇÐ</td><td width=50>ÃÑÁ¡</td><td width=50>Æò±Õ</td></tr>
+			<tr align=center><td width=100>ì´ë¦„</td><td width=200>í•™ë²ˆ</td><td width=50>êµ­ì–´</td><td width=50>ì˜ì–´</td><td width=50>ìˆ˜í•™</td><td width=50>ì´ì </td><td width=50>í‰ê· </td></tr>
 	");
 	
 	$i=0;
@@ -37,7 +37,7 @@
 	echo("</table>");
 	
 	<form action=input.php>
-		<input type=submit value='ÀÔ·ÂÀ¸·Î µ¹¾Æ°¡±â'>
+		<input type=submit value='ìž…ë ¥ìœ¼ë¡œ ëŒì•„ê°€ê¸°'>
 	</form>
 	
 	mysql_close($con);

@@ -1,15 +1,15 @@
-Python ¹®ÀÚ¿­ Á¤ÀÇ
+ï»¿Python ë¬¸ìžì—´ ì •ì˜
 
-- ¹®ÀÚ¿­ ³»¿¡ '¸¦ »ç¿ëÇÒ °æ¿ì,
-""¸¦ ÀÌ¿ëÇØ ¹®ÀÚ¿­À» Á¤ÀÇÇÏ¸é ÀÌ¿ë °¡´É
-\'À» ÀÌ¿ëÇÏ¸é ''¸¦ ÀÌ¿ëÇØ ¹®ÀÚ¿­À» Á¤ÀÇ °¡´É
+- ë¬¸ìžì—´ ë‚´ì— 'ë¥¼ ì‚¬ìš©í•  ê²½ìš°,
+""ë¥¼ ì´ìš©í•´ ë¬¸ìžì—´ì„ ì •ì˜í•˜ë©´ ì´ìš© ê°€ëŠ¥
+\'ì„ ì´ìš©í•˜ë©´ ''ë¥¼ ì´ìš©í•´ ë¬¸ìžì—´ì„ ì •ì˜ ê°€ëŠ¥
 str = 'Don\t move "RUN"'
 
-- \´Â ´ÙÀ½ ¶óÀÎÀÌ ÇöÀç ¶óÀÎÀÇ µÚ¿¡ ÀÌ¾îÁüÀ» ³ªÅ¸³¿
+- \ëŠ” ë‹¤ìŒ ë¼ì¸ì´ í˜„ìž¬ ë¼ì¸ì˜ ë’¤ì— ì´ì–´ì§ì„ ë‚˜íƒ€ëƒ„
 long_str = "This is a rather long string \
 containing back slash and new line."
 
-- ¿©·¯ ÁÙÀÇ ¹®ÀÚ¿­ Á¤ÀÇ
+- ì—¬ëŸ¬ ì¤„ì˜ ë¬¸ìžì—´ ì •ì˜
 multiline = """ While the rest of the world has been catching on to
 the Perl scripting language, the Linux community,
 long since past ...
@@ -21,7 +21,7 @@ long since past ...
 has been catching on to a '''
 
 
-'''·Î ¹®ÀÚ¿­ Á¤ÀÇ¸¦ ½ÃÀÛÇÒ °æ¿ì '¸¦ ´Üµ¶À¸·Î »ç¿ëÇÒ ¼ö ÀÖÀ½.
+'''ë¡œ ë¬¸ìžì—´ ì •ì˜ë¥¼ ì‹œìž‘í•  ê²½ìš° 'ë¥¼ ë‹¨ë…ìœ¼ë¡œ ì‚¬ìš©í•  ìˆ˜ ìžˆìŒ.
 
 
 
@@ -31,13 +31,13 @@ Escape Characters
 \\ : \
 \' : '
 \" : *
-\n : °³Çà
-\t : ÅÇ
-\b : ¹é ½ºÆäÀÌ½º
+\n : ê°œí–‰
+\t : íƒ­
+\b : ë°± ìŠ¤íŽ˜ì´ìŠ¤
 
 
 
-¹®ÀÚ¿­ ±âÃÊ ¿¬»ê
+ë¬¸ìžì—´ ê¸°ì´ˆ ì—°ì‚°
 
 str1 = 'Frist String'
 str2 = 'Second String'
@@ -64,26 +64,26 @@ First String
 
 
 
-¹®ÀÚ¿­ Æ¯¼º
+ë¬¸ìžì—´ íŠ¹ì„±
 
-- ¹®ÀÚ¿­ ÀÚ·á´Â º¯°æ ºÒ°¡´ÉÇÑ ÀÚ·áÀÓ
-- ¹®ÀÚ¿­ º¯°æÀ» À§ÇØ¼­´Â SlicingÀ» ¿©·¯ Â÷·Ê ¿¬°á È°¿ëÇÏ´Â ¹æ¹ýÀÌ ÀÖÀ½
-±×·¯³ª, ÀÌ ¹æ¹ýÀÇ °æ¿ì ¹®ÀÚ¿­ ÀÚÃ¼°¡ º¯°æµÇ´Â °ÍÀÌ ¾Æ´Ï¶ó, »õ·Î ¹®ÀÚ¿­À» »ý¼º ¹× ÇÒ´çÇÏ´Â °úÁ¤ÀÓ
+- ë¬¸ìžì—´ ìžë£ŒëŠ” ë³€ê²½ ë¶ˆê°€ëŠ¥í•œ ìžë£Œìž„
+- ë¬¸ìžì—´ ë³€ê²½ì„ ìœ„í•´ì„œëŠ” Slicingì„ ì—¬ëŸ¬ ì°¨ë¡€ ì—°ê²° í™œìš©í•˜ëŠ” ë°©ë²•ì´ ìžˆìŒ
+ê·¸ëŸ¬ë‚˜, ì´ ë°©ë²•ì˜ ê²½ìš° ë¬¸ìžì—´ ìžì²´ê°€ ë³€ê²½ë˜ëŠ” ê²ƒì´ ì•„ë‹ˆë¼, ìƒˆë¡œ ë¬¸ìžì—´ì„ ìƒì„± ë° í• ë‹¹í•˜ëŠ” ê³¼ì •ìž„
 
 
 
-À¯´ÏÄÚµå
+ìœ ë‹ˆì½”ë“œ
 
-- ´Ù±¹¾î ¹®ÀÚÀÇ ¿Ã¹Ù¸¥ Ç¥ÇöÀ» À§ÇØ À¯´ÏÄÚµå Å¸ÀÔ Áö¿ø
+- ë‹¤êµ­ì–´ ë¬¸ìžì˜ ì˜¬ë°”ë¥¸ í‘œí˜„ì„ ìœ„í•´ ìœ ë‹ˆì½”ë“œ íƒ€ìž… ì§€ì›
 
 a = 'a' << ASCII
 b = u'bc' << Unicode
-c = a+b << ÀÌ·± °æ¿ì À¯´ÏÄÚµå·Î º¯È¯µÊ
+c = a+b << ì´ëŸ° ê²½ìš° ìœ ë‹ˆì½”ë“œë¡œ ë³€í™˜ë¨
 
-- À¯´ÏÄÚµå ³»ÀåÇÔ¼ö
-a = unicode('ÇÑ±Û', 'utf-8')´Â a = u'ÇÑ±Û'°ú µ¿ÀÏ
+- ìœ ë‹ˆì½”ë“œ ë‚´ìž¥í•¨ìˆ˜
+a = unicode('í•œê¸€', 'utf-8')ëŠ” a = u'í•œê¸€'ê³¼ ë™ì¼
 
-- À¯´ÏÄÚµå´Â ÇÑ±Û ¹®ÀÚ¿­ÀÇ ±æÀÌ¸¦ ¿Ã¹Ù¸£°Ô ¹ÝÈ¯ÇÔ
-print len(u'ÇÑ±Û°ú ¼¼Á¾´ë¿Õ')
+- ìœ ë‹ˆì½”ë“œëŠ” í•œê¸€ ë¬¸ìžì—´ì˜ ê¸¸ì´ë¥¼ ì˜¬ë°”ë¥´ê²Œ ë°˜í™˜í•¨
+print len(u'í•œê¸€ê³¼ ì„¸ì¢…ëŒ€ì™•')
 
-- À¯´ÏÄÚµå Å¸ÀÔÀÇ ¹®ÀÚ¿­Àº ÀÎµ¦½Ì ¹× ½½¶óÀÌ½ÌÀÌ ¿Ã¹Ù¸£°Ô ¼öÇàµÊ
+- ìœ ë‹ˆì½”ë“œ íƒ€ìž…ì˜ ë¬¸ìžì—´ì€ ì¸ë±ì‹± ë° ìŠ¬ë¼ì´ì‹±ì´ ì˜¬ë°”ë¥´ê²Œ ìˆ˜í–‰ë¨

@@ -1,53 +1,53 @@
-bind Function
+ï»¿bind Function
 
 int bind(int sockfd, const struct sockaddr *addr, socklen_t addrlen);
-¼º°ø : 0, ½ÇÆÐ : -1
+ì„±ê³µ : 0, ì‹¤íŒ¨ : -1
 
-- sockfd : ÁÖ¼Ò¸¦ ÇÒ´çÇÒ ¼­¹ö ¼ÒÄÏ µð½ºÅ©¸³ÅÍ
-- addr : ¼­¹öÀÇ ÁÖ¼Ò Á¤º¸¸¦ ´ãÀº ±¸Á¶Ã¼(IPÁÖ¼Ò, Æ÷Æ® ¹øÈ£ µî)
-- addrlen : addr¿¡ ÀúÀåµÈ ÁÖ¼Ò Á¤º¸ Å©±â(byte)
+- sockfd : ì£¼ì†Œë¥¼ í• ë‹¹í•  ì„œë²„ ì†Œì¼“ ë””ìŠ¤í¬ë¦½í„°
+- addr : ì„œë²„ì˜ ì£¼ì†Œ ì •ë³´ë¥¼ ë‹´ì€ êµ¬ì¡°ì²´(IPì£¼ì†Œ, í¬íŠ¸ ë²ˆí˜¸ ë“±)
+- addrlen : addrì— ì €ìž¥ëœ ì£¼ì†Œ ì •ë³´ í¬ê¸°(byte)
 
 
 
-¼ö½ÅµÈ ÆÐÅ¶ÀÇ Æ÷Æ®¹øÈ£¿Í ÀÌ¸¦ Ã³¸®ÇÒ ÇÁ·Î¼¼½º¸¦ ÁöÁ¤ÇÏ±â À§ÇØ <Æ÷Æ®¹øÈ£-ÇÁ·Î¼¼½º(¼ÒÄÏ)>À» ¿¬°á
-¼­¹ö ÁÖ¼Ò Á¤º¸¸¦ addrÀ» ÅëÇØ Àü´Þ °¡´É
+ìˆ˜ì‹ ëœ íŒ¨í‚·ì˜ í¬íŠ¸ë²ˆí˜¸ì™€ ì´ë¥¼ ì²˜ë¦¬í•  í”„ë¡œì„¸ìŠ¤ë¥¼ ì§€ì •í•˜ê¸° ìœ„í•´ <í¬íŠ¸ë²ˆí˜¸-í”„ë¡œì„¸ìŠ¤(ì†Œì¼“)>ì„ ì—°ê²°
+ì„œë²„ ì£¼ì†Œ ì •ë³´ë¥¼ addrì„ í†µí•´ ì „ë‹¬ ê°€ëŠ¥
 
 
 
 recvfrom Function
 
 ssize_t recvform(int sockfd, void* buf, size_t len, int flags, struct sockaddr* src_addr, socklen_t* addrlen);
-¼º°ø : ¼ö½ÅÇÑ µ¥ÀÌÅÍÀÇ ±æÀÌ(byte), ½ÇÆÐ : -1
+ì„±ê³µ : ìˆ˜ì‹ í•œ ë°ì´í„°ì˜ ê¸¸ì´(byte), ì‹¤íŒ¨ : -1
 
-- sockfd : µ¥ÀÌÅÍ¸¦ Àü¼ÛÇÒ ¼ÒÄÏ µð½ºÅ©¸³ÅÍ
-- buf : ¼ö½ÅÇÒ µ¥ÀÌÅÍ¸¦ ÀúÀåÇÒ ¹öÆÛÀÇ Æ÷ÀÎÅÍ
-- len : Àü¼ÛÇÑ µ¥ÀÌÅÍÀÇ ±æÀÌ(¹öÆÛÀÇ Å©±â)
-- flags : Àü¼Û ½Ã »ç¿ëÇÒ ¿É¼Ç
-[MSG_OOB ; SOCK_STREAM¿¡¸¸ »ç¿ë, out-of-band µ¥ÀÌÅÍ(±ä±ÞÇÑ µ¥ÀÌÅÍ)·Î Àü¼ÛµÉ ¼ö ÀÖÀ½À» Ç¥½ÃÇÔ]
-[MSG_DONTROUTE : µ¥ÀÌÅÍ´Â ¶ó¿ìÆÃ µÉ ¼ö ¾øÀ½À¸·Î ÁöÁ¤]
-[MSG_DONTWAIT : NONE BLOCKING Åë½ÅÀÌ °¡´ÉÇÏ°Ô ÇÔ]
-(NONE BLOCKING Åë½Å : bufÀÇ µ¥ÀÌÅÍ°¡ ÀÖÀ¸¸é ±×´ë·Î ¼öÇà, ¾øÀ¸¸é ¹Ýº¹ÀûÀ¸·Î bufÀÇ µ¥ÀÌÅÍ ÀÖ´Â Áö È®ÀÎ)
-[MSG_NOSIGNAL : »ó´ë¿ÍÀÇ ¿¬°áÀÌ ²÷°åÀ» °æ¿ì, SIGPIPE ½Ã±×³ÎÀ» ¹ÞÁö ¾Êµµ·Ï ÇÔ]
+- sockfd : ë°ì´í„°ë¥¼ ì „ì†¡í•  ì†Œì¼“ ë””ìŠ¤í¬ë¦½í„°
+- buf : ìˆ˜ì‹ í•  ë°ì´í„°ë¥¼ ì €ìž¥í•  ë²„í¼ì˜ í¬ì¸í„°
+- len : ì „ì†¡í•œ ë°ì´í„°ì˜ ê¸¸ì´(ë²„í¼ì˜ í¬ê¸°)
+- flags : ì „ì†¡ ì‹œ ì‚¬ìš©í•  ì˜µì…˜
+[MSG_OOB ; SOCK_STREAMì—ë§Œ ì‚¬ìš©, out-of-band ë°ì´í„°(ê¸´ê¸‰í•œ ë°ì´í„°)ë¡œ ì „ì†¡ë  ìˆ˜ ìžˆìŒì„ í‘œì‹œí•¨]
+[MSG_DONTROUTE : ë°ì´í„°ëŠ” ë¼ìš°íŒ… ë  ìˆ˜ ì—†ìŒìœ¼ë¡œ ì§€ì •]
+[MSG_DONTWAIT : NONE BLOCKING í†µì‹ ì´ ê°€ëŠ¥í•˜ê²Œ í•¨]
+(NONE BLOCKING í†µì‹  : bufì˜ ë°ì´í„°ê°€ ìžˆìœ¼ë©´ ê·¸ëŒ€ë¡œ ìˆ˜í–‰, ì—†ìœ¼ë©´ ë°˜ë³µì ìœ¼ë¡œ bufì˜ ë°ì´í„° ìžˆëŠ” ì§€ í™•ì¸)
+[MSG_NOSIGNAL : ìƒëŒ€ì™€ì˜ ì—°ê²°ì´ ëŠê²¼ì„ ê²½ìš°, SIGPIPE ì‹œê·¸ë„ì„ ë°›ì§€ ì•Šë„ë¡ í•¨]
 
-- src_addr : ¹ß¼ÛÁö ÁÖ¼Ò
-- addrlen : src_addrÀÇ ½ÇÁ¦ Å©±â(byte)
+- src_addr : ë°œì†¡ì§€ ì£¼ì†Œ
+- addrlen : src_addrì˜ ì‹¤ì œ í¬ê¸°(byte)
 
 
 
 sendto Function
 
 ssize_t sendto(int sockfd, const void* buf, size_t len, int flags, const struct sockaddr* dest_addr, socklen_t addrlen);
-¼º°ø : ¼Û½ÅÇÑ µ¥ÀÌÅÍÀÇ ±æÀÌ(byte), ½ÇÆÐ : -1
+ì„±ê³µ : ì†¡ì‹ í•œ ë°ì´í„°ì˜ ê¸¸ì´(byte), ì‹¤íŒ¨ : -1
 
-- sockfd : µ¥ÀÌÅÍ¸¦ Àü¼ÛÇÒ ¼ÒÄÏ ½ºÅ©¸³ÅÍ
-- buf : Àü¼ÛÇÒ µ¥ÀÌÅÍ¸¦ °¡Áø ¹öÆÛÀÇ Æ÷ÀÎÅÍ
-- len : bufÀÇ ¼Û½ÅÇÒ µ¥ÀÌÅÍÀÇ ±æÀÌ(byte)
-- flags : Àü¼Û ½Ã »ç¿ë ¿É¼Ç
-[MSG_OOB ; SOCK_STREAM¿¡¸¸ »ç¿ë, out-of-band µ¥ÀÌÅÍ(±ä±ÞÇÑ µ¥ÀÌÅÍ)·Î Àü¼ÛµÉ ¼ö ÀÖÀ½À» Ç¥½ÃÇÔ]
-[MSG_DONTROUTE : µ¥ÀÌÅÍ´Â ¶ó¿ìÆÃ µÉ ¼ö ¾øÀ½À¸·Î ÁöÁ¤]
-[MSG_DONTWAIT : NONE BLOCKING Åë½ÅÀÌ °¡´ÉÇÏ°Ô ÇÔ]
-(NONE BLOCKING Åë½Å : bufÀÇ µ¥ÀÌÅÍ°¡ ÀÖÀ¸¸é ±×´ë·Î ¼öÇà, ¾øÀ¸¸é ¹Ýº¹ÀûÀ¸·Î bufÀÇ µ¥ÀÌÅÍ ÀÖ´Â Áö È®ÀÎ)
-[MSG_NOSIGNAL : »ó´ë¿ÍÀÇ ¿¬°áÀÌ ²÷°åÀ» °æ¿ì, SIGPIPE ½Ã±×³ÎÀ» ¹ÞÁö ¾Êµµ·Ï ÇÔ]
+- sockfd : ë°ì´í„°ë¥¼ ì „ì†¡í•  ì†Œì¼“ ìŠ¤í¬ë¦½í„°
+- buf : ì „ì†¡í•  ë°ì´í„°ë¥¼ ê°€ì§„ ë²„í¼ì˜ í¬ì¸í„°
+- len : bufì˜ ì†¡ì‹ í•  ë°ì´í„°ì˜ ê¸¸ì´(byte)
+- flags : ì „ì†¡ ì‹œ ì‚¬ìš© ì˜µì…˜
+[MSG_OOB ; SOCK_STREAMì—ë§Œ ì‚¬ìš©, out-of-band ë°ì´í„°(ê¸´ê¸‰í•œ ë°ì´í„°)ë¡œ ì „ì†¡ë  ìˆ˜ ìžˆìŒì„ í‘œì‹œí•¨]
+[MSG_DONTROUTE : ë°ì´í„°ëŠ” ë¼ìš°íŒ… ë  ìˆ˜ ì—†ìŒìœ¼ë¡œ ì§€ì •]
+[MSG_DONTWAIT : NONE BLOCKING í†µì‹ ì´ ê°€ëŠ¥í•˜ê²Œ í•¨]
+(NONE BLOCKING í†µì‹  : bufì˜ ë°ì´í„°ê°€ ìžˆìœ¼ë©´ ê·¸ëŒ€ë¡œ ìˆ˜í–‰, ì—†ìœ¼ë©´ ë°˜ë³µì ìœ¼ë¡œ bufì˜ ë°ì´í„° ìžˆëŠ” ì§€ í™•ì¸)
+[MSG_NOSIGNAL : ìƒëŒ€ì™€ì˜ ì—°ê²°ì´ ëŠê²¼ì„ ê²½ìš°, SIGPIPE ì‹œê·¸ë„ì„ ë°›ì§€ ì•Šë„ë¡ í•¨]
 
-- dest_addr : ¸ñÀûÁö ÁÖ¼Ò
-- addrlen : dest_addrÀÇ ½ÇÁ¦ Å©±â(byte)
+- dest_addr : ëª©ì ì§€ ì£¼ì†Œ
+- addrlen : dest_addrì˜ ì‹¤ì œ í¬ê¸°(byte)

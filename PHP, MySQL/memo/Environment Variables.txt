@@ -1,16 +1,16 @@
-PHP¿¡¼­ Á¦°øÇÏ´Â È¯°æ º¯¼ö
+ï»¿PHPì—ì„œ ì œê³µí•˜ëŠ” í™˜ê²½ ë³€ìˆ˜
 
-È¯°æº¯¼ö°ª ¼³Á¤ °¡´É
+í™˜ê²½ë³€ìˆ˜ê°’ ì„¤ì • ê°€ëŠ¥
 string getenv(string varname);
-void putenv("È¯°æº¯¼ö = setname");
+void putenv("í™˜ê²½ë³€ìˆ˜ = setname");
 
-È¯°æ º¯¼ö È®ÀÎÀº php_info()ÇÔ¼ö È£Ãú
+í™˜ê²½ ë³€ìˆ˜ í™•ì¸ì€ php_info()í•¨ìˆ˜ í˜¸ì¸¨
 
-ºó¹øÇÏ°Ô »ç¿ëÇÏ´Â È¯°æ º¯¼ö Á¾·ù
+ë¹ˆë²ˆí•˜ê²Œ ì‚¬ìš©í•˜ëŠ” í™˜ê²½ ë³€ìˆ˜ ì¢…ë¥˜
 
-PHP_SELF : ÇöÀç ½ÇÇà ÁßÀÎ PHP ½ºÅ©¸³Æ® ÆÄÀÏ
-QUERY_STRING : ÇØ´ç ÆäÀÌÁö¸¦ Á¢±ÙÇÒ ‹š »ç¿ëµÈ ÁúÀÇ ¹®ÀÚ¿­
-SERVER_NAME : ÇöÀç PHP ½ºÅ©¸³Æ®°¡ ½ÇÇàµÇ°í ÀÖ´Â È£½ºÆ®ÀÇ ÀÌ¸§
-SERVER_SOFTWARE : ¿ä±¸¿¡ ´ëÇÑ ´äº¯ÀÇ Çì´õ¿¡ »ç¿ëÇÒ ¼­¹ö ½Äº°ÀÚ
-DOCUMENT_ROOT : ÇöÀç ½ºÅ©¸³Æ®°¡ ½ÇÇàÁßÀÎ ¹®¼­ÀÇ root µð·ºÅä¸®, ¼­¹öÀÇ ¼³Á¤ ÆÄÀÏ¿¡ Á¤ÀÇ
-REQUEST_METHOD : ÇØ´ç ÆäÀÌÁö¸¦ ¿ä±¸ ½Ã, »ç¿ëÇÑ ¹æ¹ý
+PHP_SELF : í˜„ìž¬ ì‹¤í–‰ ì¤‘ì¸ PHP ìŠ¤í¬ë¦½íŠ¸ íŒŒì¼
+QUERY_STRING : í•´ë‹¹ íŽ˜ì´ì§€ë¥¼ ì ‘ê·¼í•  Â‹Âš ì‚¬ìš©ëœ ì§ˆì˜ ë¬¸ìžì—´
+SERVER_NAME : í˜„ìž¬ PHP ìŠ¤í¬ë¦½íŠ¸ê°€ ì‹¤í–‰ë˜ê³  ìžˆëŠ” í˜¸ìŠ¤íŠ¸ì˜ ì´ë¦„
+SERVER_SOFTWARE : ìš”êµ¬ì— ëŒ€í•œ ë‹µë³€ì˜ í—¤ë”ì— ì‚¬ìš©í•  ì„œë²„ ì‹ë³„ìž
+DOCUMENT_ROOT : í˜„ìž¬ ìŠ¤í¬ë¦½íŠ¸ê°€ ì‹¤í–‰ì¤‘ì¸ ë¬¸ì„œì˜ root ë””ë ‰í† ë¦¬, ì„œë²„ì˜ ì„¤ì • íŒŒì¼ì— ì •ì˜
+REQUEST_METHOD : í•´ë‹¹ íŽ˜ì´ì§€ë¥¼ ìš”êµ¬ ì‹œ, ì‚¬ìš©í•œ ë°©ë²•

@@ -1,6 +1,6 @@
-<?php
+ï»¿<?php
 	$con=mysql_connect("localhost","root","password");
-	if(!$con) die('DB Á¢¼Ó ½ÇÆÐ'.mysql_error());
+	if(!$con) die('DB ì ‘ì† ì‹¤íŒ¨'.mysql_error());
 	
 	mysql_query("set name utf8");
 	mysql_set_charset("utf8",$con);
@@ -11,11 +11,11 @@
 	$total=mysql_num_rows($result);
 	
 	if(!$total) {
-		echo ("µî·ÏµÈ ±ÛÀÌ ¾ø½À´Ï´Ù.");
+		echo ("ë“±ë¡ëœ ê¸€ì´ ì—†ìŠµë‹ˆë‹¤.");
 	}
 	else {
 		echo("<table border=1 width=700>
-				<tr><td width=50>±Û ¹øÈ£</td><td width=100>ÀÌ¸§</td><td width=150>¾´ ³¯Â¥</td><td width=400>¸Þ¸ð</td></tr>");
+				<tr><td width=50>ê¸€ ë²ˆí˜¸</td><td width=100>ì´ë¦„</td><td width=150>ì“´ ë‚ ì§œ</td><td width=400>ë©”ëª¨</td></tr>");
 	
 	
 		$pagesize=5;
@@ -48,11 +48,11 @@
 	$ppage=$cpage-1;
 	$npage=$cpage+1;
 	
-	if($cpage>1) echo("[<a href=memoshow.php?cpage=$ppage>ÀÌÀü ÆäÀÌÁö</a>]");
-	if($cpage<$endpage) echo("[<a href=memoshow.php?cpage=$npage>´ÙÀ½ ÆäÀÌÁö</a>]");
+	if($cpage>1) echo("[<a href=memoshow.php?cpage=$ppage>ì´ì „ íŽ˜ì´ì§€</a>]");
+	if($cpage<$endpage) echo("[<a href=memoshow.php?cpage=$npage>ë‹¤ìŒ íŽ˜ì´ì§€</a>]");
 	
 	echo("</td></tr>
-			<tr><td align=center><a href=memo.html>¹æ¸í·Ï ¾²±â</a></td></tr></table>");
+			<tr><td align=center><a href=memo.html>ë°©ëª…ë¡ ì“°ê¸°</a></td></tr></table>");
 	
 	mysql_close($con);
 ?>

@@ -1,4 +1,4 @@
-<?php
+ï»¿<?php
 	$con=mysql_connect("localhost","root","apmsetup");
 	mysql_select_db("tparadox",$con);
 	
@@ -6,4 +6,4 @@
 	mysql_close($con);
 ?>
 
-Eclipse³ª Visual Studio°¡ ´õ ÁÁÀ½
+Eclipseë‚˜ Visual Studioê°€ ë” ì¢‹ìŒ

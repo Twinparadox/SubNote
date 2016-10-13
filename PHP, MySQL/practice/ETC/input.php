@@ -1,24 +1,24 @@
-<?
+ï»¿<?
 #	echo("Hello World...");
 
 	echo ("
 		<form method=post action=process.php>
-			ÀÌ¸§ : <input type=text size=10 name=iname>
+			ì´ë¦„ : <input type=text size=10 name=iname>
 			<br>
-			ÇÐ¹ø : <input type=text size=10 name=inum>
+			í•™ë²ˆ : <input type=text size=10 name=inum>
 			<br>
-			±¹¾î : <input type=text size=5 name=ikor>
+			êµ­ì–´ : <input type=text size=5 name=ikor>
 			<br>
-			¿µ¾î : <input type=text size=5 name=ieng>
+			ì˜ì–´ : <input type=text size=5 name=ieng>
 			<br>
-			¼öÇÐ : <input type=text size=5 name=imath>
+			ìˆ˜í•™ : <input type=text size=5 name=imath>
 			<br>
-			<input type=submit value='µî·Ï'>
+			<input type=submit value='ë“±ë¡'>
 		</form>
 	");
 	echo("
 		<form action=show.php>
-			<input type=submit value='DB º¸±â'>
+			<input type=submit value='DB ë³´ê¸°'>
 		</form>
 	");
 ?>

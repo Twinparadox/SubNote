@@ -1,65 +1,65 @@
-½Ã±×³Î
+ï»¿ì‹œê·¸ë„
 
-- 'signal.h'¿¡ Á¤ÀÇ µÊ
+- 'signal.h'ì— ì •ì˜ ë¨
 
-- ºñµ¿±âÀû »ç°ÇµéÀÇ ¹ß»ýÀ» ÇÁ·Î¼¼½º¿¡°Ô ¾Ë·ÁÁÜ
-- ÇÁ·Î¼¼½ºµé °£ Åë½Å ¹æ¹ý Áß ÇÏ³ª
-- ¼ÒÇÁÆ®¿þ¾î ÀÎÅÍ·´Æ®
+- ë¹„ë™ê¸°ì  ì‚¬ê±´ë“¤ì˜ ë°œìƒì„ í”„ë¡œì„¸ìŠ¤ì—ê²Œ ì•Œë ¤ì¤Œ
+- í”„ë¡œì„¸ìŠ¤ë“¤ ê°„ í†µì‹  ë°©ë²• ì¤‘ í•˜ë‚˜
+- ì†Œí”„íŠ¸ì›¨ì–´ ì¸í„°ëŸ½íŠ¸
 
-- kill ÇÔ¼ö¸¦ ÀÌ¿ëÇØ ´Ù¸¥ ÇÁ·Î¼¼½º¿¡°Ô ½Ã±×³Î Àü´Þ
-- raise ÇÔ¼ö¸¦ ÀÌ¿ëÇØ ÀÚ½Å¿¡°Ô ½Ã±×³ÎÀ» ¹ß»ý
+- kill í•¨ìˆ˜ë¥¼ ì´ìš©í•´ ë‹¤ë¥¸ í”„ë¡œì„¸ìŠ¤ì—ê²Œ ì‹œê·¸ë„ ì „ë‹¬
+- raise í•¨ìˆ˜ë¥¼ ì´ìš©í•´ ìžì‹ ì—ê²Œ ì‹œê·¸ë„ì„ ë°œìƒ
 
-- ½Ã±×³Î¿¡ ÀÇÇÑ ÇÁ·Î¼¼½º Á¾·á ½Ã, ÀÌ¸¦ À¯¹ßÇÑ ½Ã±×³ÎÀÇ Á¾·ù¸¦ Àü´ÞÇÏ±â À§ÇØ ¹ÝÈ¯ °ªÀÇ »óÀ§ 8bit¿¡ ½Ã±×³Î ¹øÈ£¸¦ ÇÏÀ§ 8 bit´Â 0À¸·Î ¼³Á¤
+- ì‹œê·¸ë„ì— ì˜í•œ í”„ë¡œì„¸ìŠ¤ ì¢…ë£Œ ì‹œ, ì´ë¥¼ ìœ ë°œí•œ ì‹œê·¸ë„ì˜ ì¢…ë¥˜ë¥¼ ì „ë‹¬í•˜ê¸° ìœ„í•´ ë°˜í™˜ ê°’ì˜ ìƒìœ„ 8bitì— ì‹œê·¸ë„ ë²ˆí˜¸ë¥¼ í•˜ìœ„ 8 bitëŠ” 0ìœ¼ë¡œ ì„¤ì •
 
 
 int kill(pid_t pid, int sig);
-¼º°ø : 0, ½ÇÆÐ : -1
+ì„±ê³µ : 0, ì‹¤íŒ¨ : -1
 
-- pid : ½Ã±×³ÎÀ» ¹ÞÀ» ÇÁ·Î¼¼½º ½Äº°ÀÚ
-pid>0ÀÎ Á¤¼ö,  ÁöÁ¤ÇÑ ÇÁ·Î¼¼½º¿¡¸¸ ½Ã±×³Î Àü¼Û
-pid=0, ÇÔ¼ö¸¦ È£ÃâÇÏ´Â ÇÁ·Î¼¼½º¿Í °°Àº ±×·ì¿¡ ÀÖ´Â ¸ðµç ÇÁ·Î¼¼½º¿¡ ½Ã±×³Î Àü¼Û
-pid=-1, ÇÔ¼ö¸¦ È£ÃâÇÏ´Â ÇÁ·Î¼¼½º°¡ Àü¼ÛÇÒ ¼ö ÀÖ´Â ±ÇÇÑÀ» °¡Áø ¸ðµç ÇÁ·Î¼¼½º¿¡ ½Ã±×³Î Àü¼Û
-pid<-1ÀÎ Á¤¼ö, pidÀÇ Àý´ë°ª ÇÁ·Î¼¼½º ±×·ì¿¡ ¼ÓÇÏ´Â ¸ðµç ÇÁ·Î¼¼½º¿¡ ½Ã±×³Î Àü¼Û
+- pid : ì‹œê·¸ë„ì„ ë°›ì„ í”„ë¡œì„¸ìŠ¤ ì‹ë³„ìž
+pid>0ì¸ ì •ìˆ˜,  ì§€ì •í•œ í”„ë¡œì„¸ìŠ¤ì—ë§Œ ì‹œê·¸ë„ ì „ì†¡
+pid=0, í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ëŠ” í”„ë¡œì„¸ìŠ¤ì™€ ê°™ì€ ê·¸ë£¹ì— ìžˆëŠ” ëª¨ë“  í”„ë¡œì„¸ìŠ¤ì— ì‹œê·¸ë„ ì „ì†¡
+pid=-1, í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ëŠ” í”„ë¡œì„¸ìŠ¤ê°€ ì „ì†¡í•  ìˆ˜ ìžˆëŠ” ê¶Œí•œì„ ê°€ì§„ ëª¨ë“  í”„ë¡œì„¸ìŠ¤ì— ì‹œê·¸ë„ ì „ì†¡
+pid<-1ì¸ ì •ìˆ˜, pidì˜ ì ˆëŒ€ê°’ í”„ë¡œì„¸ìŠ¤ ê·¸ë£¹ì— ì†í•˜ëŠ” ëª¨ë“  í”„ë¡œì„¸ìŠ¤ì— ì‹œê·¸ë„ ì „ì†¡
 
-- sig : ½Ã±×³Î ¹øÈ£
+- sig : ì‹œê·¸ë„ ë²ˆí˜¸
 
 
 
 int raise(int sig);
-¼º°ø : 0, ½ÇÆÐ : -1
+ì„±ê³µ : 0, ì‹¤íŒ¨ : -1
 
-- sig : ½Ã±×³Î ¹øÈ£
-
-
-
-
-½Ã±×³Î Ã³¸®
-
-1. ¸ðµç ½Ã±×³Î¿¡ ´ëÇØ ±âº»ÀûÀÎ Ã³¸® ¹æ½ÄÀÌ ¼³Á¤µÇ¾î ÀÖÀ½
-- ´ëºÎºÐ ÇÁ·Î¼¼½º Á¾·á
-- ½Ã±×³Î ¹«½Ã
-
-2. ÀÀ¿ëÀÇ ¿ä±¸ »çÇ×¿¡ µû¶ó ½Ã±×³Î Ã³¸®ÇÏµµ·Ï ÇÁ·Î±×·¡¹ÖÇÔ
-- ½Ã±×³Î ÇÚµé·¯ ½ÇÇà
-- ½Ã±×³Î ¹«½Ã
-- ½Ã±×³Î ºí·Ï : ÇÁ·Î¼¼½º°¡ ÀÓ°è ºÎºÐ¿¡¼­ ½ÇÇàµÇ´Â µ¿¾È¿¡ ¹ß»ýÇÒ ¼ö ÀÖ´Â ÀÎÅÍ·´Æ® ¹æÁö
-	-> ÇØ´ç ½Ã±×³Î ¼ö½Å ½Ã, ½Ã±×³Î ´ë±âÅ¥¿¡ µé¾î°¨
-	-> ÇöÀç ÀÛ¾÷À» °è¼ÓÇÏ°í ³ªÁß¿¡ ½Ã±×³Î Ã³¸®
-	-> ºñÆ®¸¶½ºÅ© ÇüÅÂÀÇ ½Ã±×³Î ºí·Ï ¸¶½ºÅ©¿¡ Ãß°¡ÇØ ºí·Ï
-	-> ºí·ÏµÈ ½Ã±×³ÎÀº Áßº¹µÇÁö ¾ÊÀ½
-
-3. SIGKILL, SIGSTOP ½Ã±×³Î
-- ±âº» µ¿ÀÛÀº ÇÁ·Î¼¼½º Á¾·á
-- ¹«½Ã³ª ½Ã±×³Î ÇÚµé·¯ µî·Ï ºÒÇã
+- sig : ì‹œê·¸ë„ ë²ˆí˜¸
 
 
 
 
-½Ã±×³Î ÇÚµé·¯
+ì‹œê·¸ë„ ì²˜ë¦¬
 
-1. ½Ã±×³Î ÁýÇÕ
-- ¿©·¯ °³ÀÇ ½Ã±×³ÎÀ» ÇÑ ¹ø¿¡ Ç¥½ÃÇÏ±â À§ÇØ sigset_t »ç¿ë
-- sigset_t´Â 1024°³ÀÇ ½Ã±×³Î Ç¥½Ã °¡´É, '/usr/include/bits/sigset.h'¿¡¼­ Á¤ÀÇ
+1. ëª¨ë“  ì‹œê·¸ë„ì— ëŒ€í•´ ê¸°ë³¸ì ì¸ ì²˜ë¦¬ ë°©ì‹ì´ ì„¤ì •ë˜ì–´ ìžˆìŒ
+- ëŒ€ë¶€ë¶„ í”„ë¡œì„¸ìŠ¤ ì¢…ë£Œ
+- ì‹œê·¸ë„ ë¬´ì‹œ
+
+2. ì‘ìš©ì˜ ìš”êµ¬ ì‚¬í•­ì— ë”°ë¼ ì‹œê·¸ë„ ì²˜ë¦¬í•˜ë„ë¡ í”„ë¡œê·¸ëž˜ë°í•¨
+- ì‹œê·¸ë„ í•¸ë“¤ëŸ¬ ì‹¤í–‰
+- ì‹œê·¸ë„ ë¬´ì‹œ
+- ì‹œê·¸ë„ ë¸”ë¡ : í”„ë¡œì„¸ìŠ¤ê°€ ìž„ê³„ ë¶€ë¶„ì—ì„œ ì‹¤í–‰ë˜ëŠ” ë™ì•ˆì— ë°œìƒí•  ìˆ˜ ìžˆëŠ” ì¸í„°ëŸ½íŠ¸ ë°©ì§€
+	-> í•´ë‹¹ ì‹œê·¸ë„ ìˆ˜ì‹  ì‹œ, ì‹œê·¸ë„ ëŒ€ê¸°íì— ë“¤ì–´ê°
+	-> í˜„ìž¬ ìž‘ì—…ì„ ê³„ì†í•˜ê³  ë‚˜ì¤‘ì— ì‹œê·¸ë„ ì²˜ë¦¬
+	-> ë¹„íŠ¸ë§ˆìŠ¤í¬ í˜•íƒœì˜ ì‹œê·¸ë„ ë¸”ë¡ ë§ˆìŠ¤í¬ì— ì¶”ê°€í•´ ë¸”ë¡
+	-> ë¸”ë¡ëœ ì‹œê·¸ë„ì€ ì¤‘ë³µë˜ì§€ ì•ŠìŒ
+
+3. SIGKILL, SIGSTOP ì‹œê·¸ë„
+- ê¸°ë³¸ ë™ìž‘ì€ í”„ë¡œì„¸ìŠ¤ ì¢…ë£Œ
+- ë¬´ì‹œë‚˜ ì‹œê·¸ë„ í•¸ë“¤ëŸ¬ ë“±ë¡ ë¶ˆí—ˆ
+
+
+
+
+ì‹œê·¸ë„ í•¸ë“¤ëŸ¬
+
+1. ì‹œê·¸ë„ ì§‘í•©
+- ì—¬ëŸ¬ ê°œì˜ ì‹œê·¸ë„ì„ í•œ ë²ˆì— í‘œì‹œí•˜ê¸° ìœ„í•´ sigset_t ì‚¬ìš©
+- sigset_tëŠ” 1024ê°œì˜ ì‹œê·¸ë„ í‘œì‹œ ê°€ëŠ¥, '/usr/include/bits/sigset.h'ì—ì„œ ì •ì˜
 
 #define _SIGSET_NWORDS (1024/(8*sizeof(unsigned long int)))
 typedef struct
@@ -68,17 +68,17 @@ unsigned long int __val[_SIGSET_NWORDS];
 } __sigset_t;
 
 
-3. sigaction() ÇÔ¼ö¸¦ »ç¿ëÇØ ½Ã±×³Î ÇÚµé·¯ µî·Ï
+3. sigaction() í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•´ ì‹œê·¸ë„ í•¸ë“¤ëŸ¬ ë“±ë¡
 
 int sigaction(int signum, const struct sigaction* act, struct sigaction* oldact);
-¼º°ø : 0, ½ÇÆÐ : -1
+ì„±ê³µ : 0, ì‹¤íŒ¨ : -1
 
-- signum : ½Ã±×³Î ¹øÈ£(SIGKILL, SIGSTOPÀº Á¦¿Ü)
-- act : ¼³Á¤ÇÒ ½Ã±×³Î ÇÚµé·¯ Æ÷ÇÔÇÑ ±¸Á¶Ã¼
-- ÀÌÀü ½Ã±×³Î ÇÚµé·¯¸¦ Æ÷ÇÔÇÑ ±¸Á¶Ã¼
+- signum : ì‹œê·¸ë„ ë²ˆí˜¸(SIGKILL, SIGSTOPì€ ì œì™¸)
+- act : ì„¤ì •í•  ì‹œê·¸ë„ í•¸ë“¤ëŸ¬ í¬í•¨í•œ êµ¬ì¡°ì²´
+- ì´ì „ ì‹œê·¸ë„ í•¸ë“¤ëŸ¬ë¥¼ í¬í•¨í•œ êµ¬ì¡°ì²´
 
 
-4. sigaction ±¸Á¶Ã¼
+4. sigaction êµ¬ì¡°ì²´
 
 struct sigaction
 {
@@ -91,42 +91,42 @@ void(*sa_restorer)(void);
 
 
 - sa_handler, sa_sigaction
-½Ã±×³Î ÇÚµé·¯¸¦ °¡¸®Å´
-ÀÏ¹ÝÀûÀ¸·Î sa_hander ÀÌ¿ë
-ºÎ°¡ Á¤º¸ È°¿ë ½Ã sa_sigaction ÀÌ¿ë
+ì‹œê·¸ë„ í•¸ë“¤ëŸ¬ë¥¼ ê°€ë¦¬í‚´
+ì¼ë°˜ì ìœ¼ë¡œ sa_hander ì´ìš©
+ë¶€ê°€ ì •ë³´ í™œìš© ì‹œ sa_sigaction ì´ìš©
 
 - sa_mask
-½Ã±×³Î ÇÚµé·¯°¡ µ¿ÀÛµÇ´Â µ¿¾È ºí·ÏÇÒ ½Ã±×³Î ÁýÇÕ
-½Ã±×³Î ÇÚµé·¯°¡ µ¿ÀÛ Áß sa_mask¿¡ ¾ø´Â ½Ã±×³Î ¹ß»ý
-ÇöÀç ½Ã±×³Î ÇÚµé·¯´Â ÀÎÅÍ·´Æ® µÇ°í, »õ·Ó°Ô ¹ß»ýµÇ ½Ã±×³Î Ã³¸®
-½Ã±×³Î ÇÚµé·¯ ½ÇÇà Áß ÀÎÅÍ·´Æ®°¡ µÇÁö ¾Êµµ·Ï sigfillset()ÇÔ¼ö·Î ¸ðµÎ Æ÷ÇÔ
+ì‹œê·¸ë„ í•¸ë“¤ëŸ¬ê°€ ë™ìž‘ë˜ëŠ” ë™ì•ˆ ë¸”ë¡í•  ì‹œê·¸ë„ ì§‘í•©
+ì‹œê·¸ë„ í•¸ë“¤ëŸ¬ê°€ ë™ìž‘ ì¤‘ sa_maskì— ì—†ëŠ” ì‹œê·¸ë„ ë°œìƒ
+í˜„ìž¬ ì‹œê·¸ë„ í•¸ë“¤ëŸ¬ëŠ” ì¸í„°ëŸ½íŠ¸ ë˜ê³ , ìƒˆë¡­ê²Œ ë°œìƒë˜ ì‹œê·¸ë„ ì²˜ë¦¬
+ì‹œê·¸ë„ í•¸ë“¤ëŸ¬ ì‹¤í–‰ ì¤‘ ì¸í„°ëŸ½íŠ¸ê°€ ë˜ì§€ ì•Šë„ë¡ sigfillset()í•¨ìˆ˜ë¡œ ëª¨ë‘ í¬í•¨
 
 - sa_restorer
-»ç¿ëµÇÁö ¾ÊÀ½
+ì‚¬ìš©ë˜ì§€ ì•ŠìŒ
 
 - sa_flags
 SA_SIGINFO
-¹Ì¼³Á¤ ½Ã, ½Ã±×³ÎÀÌ ¹ß»ýÇÏ¸é sa_handler¿¡ ¸í½ÃµÈ ÇÚµé·¯ ÇÔ¼ö°¡ È£Ãâ
-¼³Á¤ ½Ã, ½Ã±×³ÎÀÌ ¹ß»ýÇÏ¸é sa_sigaction¿¡ ¸í½ÃµÈ ÇÚµé·¯ È£Ãâ
+ë¯¸ì„¤ì • ì‹œ, ì‹œê·¸ë„ì´ ë°œìƒí•˜ë©´ sa_handlerì— ëª…ì‹œëœ í•¸ë“¤ëŸ¬ í•¨ìˆ˜ê°€ í˜¸ì¶œ
+ì„¤ì • ì‹œ, ì‹œê·¸ë„ì´ ë°œìƒí•˜ë©´ sa_sigactionì— ëª…ì‹œëœ í•¸ë“¤ëŸ¬ í˜¸ì¶œ
 
 SA_ONESHOT or SA_RESETHAND
-½Ã±×³Î ÇÚµé·¯°¡ ÇÑ ¹ø ½ÇÇà ÈÄ, ½Ã±×³Î Ã³¸® ±âº» µ¿ÀÛÀ¸·Î µ¹¾Æ°¨
-¼³Ä¡ÇÑ ½Ã±×³Î ÇÚµé·¯´Â ÇÑ ¹ø ½ÇÇà ÈÄ, ½Ã±×³ÎÀº SIG_DFL¿¡ ÀÇÇØ ¼öÇà
+ì‹œê·¸ë„ í•¸ë“¤ëŸ¬ê°€ í•œ ë²ˆ ì‹¤í–‰ í›„, ì‹œê·¸ë„ ì²˜ë¦¬ ê¸°ë³¸ ë™ìž‘ìœ¼ë¡œ ëŒì•„ê°
+ì„¤ì¹˜í•œ ì‹œê·¸ë„ í•¸ë“¤ëŸ¬ëŠ” í•œ ë²ˆ ì‹¤í–‰ í›„, ì‹œê·¸ë„ì€ SIG_DFLì— ì˜í•´ ìˆ˜í–‰
 
 
-5. signal_unsafe ÇÔ¼ö
+5. signal_unsafe í•¨ìˆ˜
 
-- °á°ú¸¦ ¿¹ÃøÇÒ ¼ö ¾ø´Â ÇÔ¼ö
-malloc, free, alarm, sleep, fcntl, fork µî
-½Ã±×³Î ÇÚµé·¯ ¿ÜºÎÀÇ ÀÛ¾÷°ú Ãæµ¹ °¡´É¼º
-Á¤Àû º¯¼ö³ª Àü¿ª º¯¼ö »ç¿ë
+- ê²°ê³¼ë¥¼ ì˜ˆì¸¡í•  ìˆ˜ ì—†ëŠ” í•¨ìˆ˜
+malloc, free, alarm, sleep, fcntl, fork ë“±
+ì‹œê·¸ë„ í•¸ë“¤ëŸ¬ ì™¸ë¶€ì˜ ìž‘ì—…ê³¼ ì¶©ëŒ ê°€ëŠ¥ì„±
+ì •ì  ë³€ìˆ˜ë‚˜ ì „ì—­ ë³€ìˆ˜ ì‚¬ìš©
 
-- È£ÃâÇØ¾ß ÇÒ °æ¿ì
-Á÷Á¢ È£Ãâº¸´Ù ÇÚµé·¯ ³»¿¡¼­´Â Æ¯Á¤ ÇÃ·¡±×¸¸ ¼³Á¤
-ÇÚµé·¯°¡ Á¾·áµÈ ÈÄ ÇÃ·¡±×¸¦ È®ÀÎÇÏ°í signal_unsafeÇÑ ÇÔ¼ö ÇÚµé·¯ ¹Û¿¡¼­ È£Ãâ
+- í˜¸ì¶œí•´ì•¼ í•  ê²½ìš°
+ì§ì ‘ í˜¸ì¶œë³´ë‹¤ í•¸ë“¤ëŸ¬ ë‚´ì—ì„œëŠ” íŠ¹ì • í”Œëž˜ê·¸ë§Œ ì„¤ì •
+í•¸ë“¤ëŸ¬ê°€ ì¢…ë£Œëœ í›„ í”Œëž˜ê·¸ë¥¼ í™•ì¸í•˜ê³  signal_unsafeí•œ í•¨ìˆ˜ í•¸ë“¤ëŸ¬ ë°–ì—ì„œ í˜¸ì¶œ
 
 
-6. signal ÇÔ¼ö
+6. signal í•¨ìˆ˜
 
-- sigaction ÇÔ¼ö°¡ ¸¸µé¾îÁö±â ÀÌÀü¿¡ »ç¿ë
-- ÇöÀç´Â »ç¿ëÇÏÁö ¾ÊÀ» °ÍÀ» ±ÇÀå
+- sigaction í•¨ìˆ˜ê°€ ë§Œë“¤ì–´ì§€ê¸° ì´ì „ì— ì‚¬ìš©
+- í˜„ìž¬ëŠ” ì‚¬ìš©í•˜ì§€ ì•Šì„ ê²ƒì„ ê¶Œìž¥

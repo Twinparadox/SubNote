@@ -1,9 +1,9 @@
-### MySQL Query
+﻿### MySQL Query
 
-- NULL과 ''은 동일하지 않음
-- where을 이용한 조건 추가
-- 조건이 2개 이상일 경우 and, or 이용
-- between을 이용해서 범위 지정도 가능
+- NULL怨?''? ??쇳吏 ??
+- where? ?댁⑺ 議곌굔 異媛
+- 議곌굔??2媛 ?댁??寃쎌?and, or ?댁?
+- between? ?댁⑺댁 踰? 吏?? 媛??
 
 ##desc
 desc table_name;
@@ -15,31 +15,31 @@ describe table_name;
 ##alter
 
 alter table table_name add field_name var_type;
--> table_name에 var_type을 가진 field_name의 field 생성
+-> table_name? var_type? 媛吏 field_name? field ???
 
 alter table table_name drop field_name;
--> table_name에 field_name을 삭제
+-> table_name? field_name? ??
 
 alter table table_name modify field_name var_type;
--> table_name에 field_name에 해당하는 필드를 var_type로 수정
+-> table_name? field_name? ?대뱁? ??瑜?var_type濡 ??
 
 drop table table_name;
--> table_name을 삭제
+-> table_name? ??
 
 
 ##insert
 
 insert into table_name values ('', '', '', 5);
--> field의 var_type이 varchar, string인 경우, ''내에 입력
--> field의 var_type이 int인 경우 숫자 바로 입력
--> ""도 사용 가능하나, php에서 혼선 발생할 수도..
--> table에 record 삽입 시, field의 순서에 맞추어야 하며, 모든 필드에 대해 value 지정이 필요
--> 입력을 원하지 않을 경우 정수는 0, 문자열과 가변문자는 ''을 삽입
+-> field? var_type??varchar, string??寃쎌? ''?댁 ???
+-> field? var_type??int??寃쎌??レ 諛濡 ???
+-> ""? ?ъ?媛?ν?, php?? ?쇱 諛?? ??..
+-> table? record ?쎌 ?, field? ??? 留異?댁??硫? 紐⑤ ??? ???value 吏?????
+-> ??μ ??吏 ?? 寃쎌???? 0, 臾몄?닿낵 媛蹂臾몄? ''? ?쎌
 
 
 insert into table_name(filed1, field2) values('', '');
--> field의 순서와 위치를 맞추지 않고 특정 field에만 value를 입력하고자 하는 경우..
--> 이 경우 입력되지 않은 field는 NULL로 처리
+-> field? ??? ?移瑜?留異吏 ?怨 ?뱀 field?留 value瑜???ν怨? ?? 寃쎌?.
+-> ??寃쎌???λ吏 ?? field? NULL濡 泥由?
 
 
 ##update
@@ -47,17 +47,17 @@ insert into table_name(filed1, field2) values('', '');
 update table_name set record1='', record2='';
 update table_name set record1='', record2='' where filed='';
 
-해당 field의 해당하는 조건을 만족하는 경우, 해당 레코드를 update
+?대?field? ?대뱁? 議곌굔? 留議깊? 寃쎌? ?대??肄?瑜?update
 
 update table_name set age = age + 1;
--> age field에 해당하는 모든 값들을 1씩 증가
--> 해당 레코드 자체에 연산식을 이용한 value update 가능
+-> age field? ?대뱁? 紐⑤ 媛?ㅼ 1??利媛
+-> ?대??肄? ?泥댁 ?곗곗? ?댁⑺ value update 媛??
 
 
-##부분 문자열 추출
-where field_name like "%차" : 차로 끝나는 레코드 선택
-where field_name like "차%" : 차로 시작하는 레코드 선택
-where field_name like "%차%" : 차를 포함하는 레코드 선택
+##遺遺 臾몄??異異
+where field_name like "%李? : 李⑤? ??? ?肄? ??
+where field_name like "李?" : 李⑤? ???? ?肄? ??
+where field_name like "%李?" : 李⑤? ?ы⑦? ?肄? ??
 
 
-varchar(var_length) binary << 한글 Character sorting 가능
+varchar(var_length) binary << ?湲 Character sorting 媛??

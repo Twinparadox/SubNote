@@ -1,5 +1,5 @@
-<?
-#	echo ("ÀÌ¸§ : $iname, ÇÐ¹ø : $inum, ±¹¾î : $ikor, ¿µ¾î : $ieng, ¼öÇÐ : $imath");
+ï»¿<?
+#	echo ("ì´ë¦„ : $iname, í•™ë²ˆ : $inum, êµ­ì–´ : $ikor, ì˜ì–´ : $ieng, ìˆ˜í•™ : $imath");
 	
 	$host="localhost";
 	$ID="root";

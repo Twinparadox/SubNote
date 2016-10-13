@@ -1,20 +1,20 @@
-Endianness 
+ï»¿Endianness 
 
 
-ÄÄÇ»ÅÍÀÇ ¸Þ¸ð¸®¿¡ ¿©·¯ ¹ÙÀÌÆ®·Î ±¸¼ºµÈ µ¥ÀÌÅÍ¸¦ ÀúÀåÇÏ´Â ¹æ¹ý
+ì»´í“¨í„°ì˜ ë©”ëª¨ë¦¬ì— ì—¬ëŸ¬ ë°”ì´íŠ¸ë¡œ êµ¬ì„±ëœ ë°ì´í„°ë¥¼ ì €ìž¥í•˜ëŠ” ë°©ë²•
 
-Byte Order¶ó°íµµ ÇÔ
+Byte Orderë¼ê³ ë„ í•¨
 
-ÄÄÇ»ÅÍÀÇ ¹ÙÀÌÆ® ¼ø¼­´Â ÇÁ·Î¼¼¼­ ¾ÆÅ°ÅØÃ³¿¡ ÀÇÇØ °áÁ¤, È£½ºÆ® ¹ÙÀÌÆ® Á¤·ÄÀÌ¶ó°í ºÎ¸§
+ì»´í“¨í„°ì˜ ë°”ì´íŠ¸ ìˆœì„œëŠ” í”„ë¡œì„¸ì„œ ì•„í‚¤í…ì²˜ì— ì˜í•´ ê²°ì •, í˜¸ìŠ¤íŠ¸ ë°”ì´íŠ¸ ì •ë ¬ì´ë¼ê³  ë¶€ë¦„
 
 x86 : little-endian
 
-³×Æ®¿öÅ© Åë½Å Áß ÀÌÁ¾ ÄÄÇ»ÅÍ »çÀÌÀÇ ¹ÙÀÌÆ® Á¤·Ä ¹®Á¦¸¦ ÇØ°áÇÏ±â À§ÇØ ºò ¿£µð¾È ¹æ½ÄÀÇ ³×Æ®¿öÅ© ¹ÙÀÌÆ® Á¤·Ä »ç¿ë
+ë„¤íŠ¸ì›Œí¬ í†µì‹  ì¤‘ ì´ì¢… ì»´í“¨í„° ì‚¬ì´ì˜ ë°”ì´íŠ¸ ì •ë ¬ ë¬¸ì œë¥¼ í•´ê²°í•˜ê¸° ìœ„í•´ ë¹… ì—”ë””ì•ˆ ë°©ì‹ì˜ ë„¤íŠ¸ì›Œí¬ ë°”ì´íŠ¸ ì •ë ¬ ì‚¬ìš©
 
-¸ÖÆ¼ ¹ÙÀÌÆ® µ¥ÀÌÅÍ Å¸ÀÔ¿¡¼­ Áß¿äÇÔ
+ë©€í‹° ë°”ì´íŠ¸ ë°ì´í„° íƒ€ìž…ì—ì„œ ì¤‘ìš”í•¨
 
 
-¹ÙÀÌÆ® Á¤·Ä ÇÔ¼ö
+ë°”ì´íŠ¸ ì •ë ¬ í•¨ìˆ˜
 
 Linux / Unix
 
@@ -24,26 +24,26 @@ u_short ntohs(u_short netshort); // network to host short
 u_long ntohl(u_long netlong); // network to host long
 
 
-SOCKADDR_IN / SOCKADDR_IN6 ±¸Á¶Ã¼ ³» º¯È¯µÇ´Â °ª
+SOCKADDR_IN / SOCKADDR_IN6 êµ¬ì¡°ì²´ ë‚´ ë³€í™˜ë˜ëŠ” ê°’
 
 IPv4
-³×Æ®¿öÅ© ¹ÙÀÌÆ® Á¤·Ä : sin_port, sin_addr
-È£½ºÆ® ¹ÙÀÌÆ® Á¤·Ä : sin_family, sin_zero
+ë„¤íŠ¸ì›Œí¬ ë°”ì´íŠ¸ ì •ë ¬ : sin_port, sin_addr
+í˜¸ìŠ¤íŠ¸ ë°”ì´íŠ¸ ì •ë ¬ : sin_family, sin_zero
 
 IPv6
-³×Æ®¿öÅ© ¹ÙÀÌÆ® Á¤·Ä : sin6_port, sin6_flowinfo, sin6_addr
-È£½ºÆ® ¹ÙÀÌÆ® Á¤·Ä : sin6_family, sin6_scope_id
+ë„¤íŠ¸ì›Œí¬ ë°”ì´íŠ¸ ì •ë ¬ : sin6_port, sin6_flowinfo, sin6_addr
+í˜¸ìŠ¤íŠ¸ ë°”ì´íŠ¸ ì •ë ¬ : sin6_family, sin6_scope_id
 
 
 
-IP Address º¯È¯
+IP Address ë³€í™˜
 
 IPv4
 
-¹®ÀÚ¿­ ÇüÅÂ·Î IP Address¸¦ 32bit ¼ýÀÚ(³×Æ®¿öÅ© ¹ÙÀÌÆ® Á¤·Ä)·Î º¯È¯
+ë¬¸ìžì—´ í˜•íƒœë¡œ IP Addressë¥¼ 32bit ìˆ«ìž(ë„¤íŠ¸ì›Œí¬ ë°”ì´íŠ¸ ì •ë ¬)ë¡œ ë³€í™˜
 unsigned long inet_addr (const char *cp);
 
-32bit ¼ýÀÚ(³×Æ®¿öÅ© ¹ÙÀÌÆ® Á¤·Ä)·Î IPv4¸¦ ¹®ÀÚ¿­·Î º¯È¯
+32bit ìˆ«ìž(ë„¤íŠ¸ì›Œí¬ ë°”ì´íŠ¸ ì •ë ¬)ë¡œ IPv4ë¥¼ ë¬¸ìžì—´ë¡œ ë³€í™˜
 char *inet_ntoa (struct in_addr in);
 
 ex)

@@ -1,72 +1,72 @@
-µ¥ÀÌÅÍ ¼Û¼ö½Å ÇÔ¼ö
+ï»¿ë°ì´í„° ì†¡ìˆ˜ì‹  í•¨ìˆ˜
 
 
-recv ÇÔ¼ö
+recv í•¨ìˆ˜
 
 ssize_t recv(int sockfd, void* buf, size_t nbytes, int flags);
-¼º°ø : ¼ö½ÅÇÑ ¹ÙÀÌÆ®¼ö(´Ù¸¸ ÆÄÀÏÀÇ ³¡ÀÎ EOF Àü¼Û ½Ã 0), ½ÇÆÐ : -1
+ì„±ê³µ : ìˆ˜ì‹ í•œ ë°”ì´íŠ¸ìˆ˜(ë‹¤ë§Œ íŒŒì¼ì˜ ëì¸ EOF ì „ì†¡ ì‹œ 0), ì‹¤íŒ¨ : -1
 
-- sockfd : µ¥ÀÌÅÍ ¼ö½Å ´ë»ó°úÀÇ ¿¬°áÀ» ÀÇ¹ÌÇÏ´Â ¼ÒÄÏÀÇ ÆÄÀÏ µð½ºÅ©¸³ÅÍ
-- buf : ¼ö½ÅµÈ µ¥ÀÌÅÍ¸¦ ÀúÀåÇÏ°í ÀÖ´Â ¹öÆÛÀÇ ÁÖ¼Ò °ª
-- nbytes : ¼ö½ÅÇÒ ¹ÙÀÌÆ® ¼ö
-- flags : µ¥ÀÌÅÍ ¼ö½Å ½Ã Àû¿ëÇÒ ´Ù¾çÇÑ ¿É¼Ç Á¤º¸
-
-
-1. ¼ÒÄÏÀ¸·ÎºÎÅÍ µé¾î¿À´Â µ¥ÀÌÅÍ ¼ö½Å
-2. read ÇÔ¼ö¿Í ´Þ¸® µ¥ÀÌÅÍ ¼ö½Å ¹æ¹ý¿¡ ´ëÇÑ ¿É¼Ç ¼³Á¤ °¡´É
-3. recv´Â ¿¬°áÇü ¼­ºñ½º(TCP)¿¡ recvfromÀº ºñ¿¬°áÇü ¼­ºñ½º(UDP)¿¡ »ç¿ë
+- sockfd : ë°ì´í„° ìˆ˜ì‹  ëŒ€ìƒê³¼ì˜ ì—°ê²°ì„ ì˜ë¯¸í•˜ëŠ” ì†Œì¼“ì˜ íŒŒì¼ ë””ìŠ¤í¬ë¦½í„°
+- buf : ìˆ˜ì‹ ëœ ë°ì´í„°ë¥¼ ì €ìž¥í•˜ê³  ìžˆëŠ” ë²„í¼ì˜ ì£¼ì†Œ ê°’
+- nbytes : ìˆ˜ì‹ í•  ë°”ì´íŠ¸ ìˆ˜
+- flags : ë°ì´í„° ìˆ˜ì‹  ì‹œ ì ìš©í•  ë‹¤ì–‘í•œ ì˜µì…˜ ì •ë³´
 
 
+1. ì†Œì¼“ìœ¼ë¡œë¶€í„° ë“¤ì–´ì˜¤ëŠ” ë°ì´í„° ìˆ˜ì‹ 
+2. read í•¨ìˆ˜ì™€ ë‹¬ë¦¬ ë°ì´í„° ìˆ˜ì‹  ë°©ë²•ì— ëŒ€í•œ ì˜µì…˜ ì„¤ì • ê°€ëŠ¥
+3. recvëŠ” ì—°ê²°í˜• ì„œë¹„ìŠ¤(TCP)ì— recvfromì€ ë¹„ì—°ê²°í˜• ì„œë¹„ìŠ¤(UDP)ì— ì‚¬ìš©
 
 
-send ÇÔ¼ö
+
+
+send í•¨ìˆ˜
 
 ssize_t send(int sockfd, const void* buf, size_t nbytes, int flags);
-¼º°ø : Àü¼ÛµÈ ¹ÙÀÌÆ® ¼ö, ½ÇÆÐ : -1
+ì„±ê³µ : ì „ì†¡ëœ ë°”ì´íŠ¸ ìˆ˜, ì‹¤íŒ¨ : -1
 
-- sockfd : µ¥ÀÌÅÍ Àü¼Û ´ë»ó°ú ¿¬°áÀ» ÀÇ¹ÌÇÏ´Â ¼ÒÄÏÀÇ ÆÄÀÏ µð½ºÅ©¸³ÅÍ, ¼­¹öÀÇ accept ÇÔ¼ö¿Í Å¬¶óÀÌ¾ðÆ®ÀÇ connect ÇÔ¼ö°¡ ¼º°øÀûÀ¸·Î ½ÇÇàµÈ ÈÄÀÇ ¼ÒÄÏ µð½ºÅ©¸³ÅÍ
-- buf : Àü¼ÛÇÒ µ¥ÀÌÅÍ¸¦ ÀúÀåÇÏ°í ÀÖ´Â ¹öÆÛÀÇ ÁÖ¼Ò °ª
-- nbytes : Àü¼ÛÇÒ ¹ÙÀÌÆ® ¼ö
-- flags : µ¥ÀÌÅÍ Àü¼Û ½Ã Àû¿ëÇÒ ´Ù¾çÇÑ ¿É¼Ç Á¤º¸
-
-
-1. ¼ÒÄÏÀ» ÅëÇØ ¿¬°áµÈ »ó´ë¹æ¿¡°Ô µ¥ÀÌÅÍ ¼Û½Å
-2. write ÇÔ¼ö¿Í ´Þ¸® µ¥ÀÌÅÍ ¼Û½Å ¹æ¹ý¿¡ ´ëÇÑ ¿É¼Ç ¼³Á¤ °¡´É
-3. send´Â ¿¬°áÇü ¼­ºñ½º(TCP)¿¡¼­, sendto´Â ºñ¿¬°áÇü ¼­ºñ½º(UDP)¿¡ »ç¿ë
+- sockfd : ë°ì´í„° ì „ì†¡ ëŒ€ìƒê³¼ ì—°ê²°ì„ ì˜ë¯¸í•˜ëŠ” ì†Œì¼“ì˜ íŒŒì¼ ë””ìŠ¤í¬ë¦½í„°, ì„œë²„ì˜ accept í•¨ìˆ˜ì™€ í´ë¼ì´ì–¸íŠ¸ì˜ connect í•¨ìˆ˜ê°€ ì„±ê³µì ìœ¼ë¡œ ì‹¤í–‰ëœ í›„ì˜ ì†Œì¼“ ë””ìŠ¤í¬ë¦½í„°
+- buf : ì „ì†¡í•  ë°ì´í„°ë¥¼ ì €ìž¥í•˜ê³  ìžˆëŠ” ë²„í¼ì˜ ì£¼ì†Œ ê°’
+- nbytes : ì „ì†¡í•  ë°”ì´íŠ¸ ìˆ˜
+- flags : ë°ì´í„° ì „ì†¡ ì‹œ ì ìš©í•  ë‹¤ì–‘í•œ ì˜µì…˜ ì •ë³´
 
 
+1. ì†Œì¼“ì„ í†µí•´ ì—°ê²°ëœ ìƒëŒ€ë°©ì—ê²Œ ë°ì´í„° ì†¡ì‹ 
+2. write í•¨ìˆ˜ì™€ ë‹¬ë¦¬ ë°ì´í„° ì†¡ì‹  ë°©ë²•ì— ëŒ€í•œ ì˜µì…˜ ì„¤ì • ê°€ëŠ¥
+3. sendëŠ” ì—°ê²°í˜• ì„œë¹„ìŠ¤(TCP)ì—ì„œ, sendtoëŠ” ë¹„ì—°ê²°í˜• ì„œë¹„ìŠ¤(UDP)ì— ì‚¬ìš©
 
-¿É¼Ç Á¤º¸
-- |(or) ¿¬»êÀÚ¸¦ ÀÌ¿ëÇØ µÑ ÀÌ»ó µ¿½Ã ÁöÁ¤ °¡´É
-- ¿É¼ÇÀÇ Á¾·ù¿Í Áö¿ø ¿©ºÎ´Â OS¿¡ µû¶ó Â÷ÀÌ°¡ ÀÖÀ½
+
+
+ì˜µì…˜ ì •ë³´
+- |(or) ì—°ì‚°ìžë¥¼ ì´ìš©í•´ ë‘˜ ì´ìƒ ë™ì‹œ ì§€ì • ê°€ëŠ¥
+- ì˜µì…˜ì˜ ì¢…ë¥˜ì™€ ì§€ì› ì—¬ë¶€ëŠ” OSì— ë”°ë¼ ì°¨ì´ê°€ ìžˆìŒ
 
 
 
 MSG_OOB(Out-Of-Band data)
-- ±ä±Þ µ¥ÀÌÅÍ Àü¼Û ¹æ¹ý
+- ê¸´ê¸‰ ë°ì´í„° ì „ì†¡ ë°©ë²•
 send(sock, "test", 4, MSG_OOB);
 recv(sock, buf, sizeof(buf)-1, MSG_OOB);
-- ¿ÀÁ÷ ÇÑ ¹ÙÀÌÆ® µ¥ÀÌÅÍ¸¸ Ã³¸®ÇÔ
-- ±ä±Þ µ¥ÀÌÅÍ ¼ö½Å ½Ã "SIGURG" ½Ã±×³ÎÀ» ¹ÞÀ» ÇÁ·Î¼¼½º ÁöÁ¤
-- SIGURG ½Ã±×³Î Ã³¸®¸¦ À§ÇÑ ¿ä±¸»çÇ×
-¼ÒÄÏÀÇ ¼ÒÀ¯±Ç È®º¸ : fcntlÇÔ¼ö ÀÌ¿ë
-SIGURG¿¡ ´ëÇÑ ½Ã±×³Î ÇÚµé·¯ Á¤ÀÇ
-ÇÁ·Î±×·¥ÀÌ SIGURG ½Ã±×³Î ¼ö½Å °¡´ÉÇØ¾ß ÇÔ
+- ì˜¤ì§ í•œ ë°”ì´íŠ¸ ë°ì´í„°ë§Œ ì²˜ë¦¬í•¨
+- ê¸´ê¸‰ ë°ì´í„° ìˆ˜ì‹  ì‹œ "SIGURG" ì‹œê·¸ë„ì„ ë°›ì„ í”„ë¡œì„¸ìŠ¤ ì§€ì •
+- SIGURG ì‹œê·¸ë„ ì²˜ë¦¬ë¥¼ ìœ„í•œ ìš”êµ¬ì‚¬í•­
+ì†Œì¼“ì˜ ì†Œìœ ê¶Œ í™•ë³´ : fcntlí•¨ìˆ˜ ì´ìš©
+SIGURGì— ëŒ€í•œ ì‹œê·¸ë„ í•¸ë“¤ëŸ¬ ì •ì˜
+í”„ë¡œê·¸ëž¨ì´ SIGURG ì‹œê·¸ë„ ìˆ˜ì‹  ê°€ëŠ¥í•´ì•¼ í•¨
 
 MSG_PEEK
-- MSG_DONTWAIT ¿É¼Ç°ú ÇÔ²² ¼³Á¤µÇ¾î ÀÔ·Â¹öÆÛ¿¡ ¼ö½ÅµÈ µ¥ÀÌÅÍ°¡ ÀÖ´ÂÁö È®ÀÎÇÏ´Â ¸ñÀûÀ¸·Î »ç¿ë
-- ÇØ´ç ¿É¼ÇÀ» ÁÖ°í, recvÇÔ¼ö È£Ãâ ½Ã, µ¥ÀÌÅÍ°¡ ¹öÆÛ¿¡ Á¸ÀçÇÑ´Ù¸é ¹öÆÛ·ÎºÎÅÍ µ¥ÀÌÅÍ¸¦ ÀÐ¾î µéÀÓ
-- ÀÐ¾î µéÀÎ µ¥ÀÌÅÍ´Â ¹öÆÛ¿¡¼­ »ç¶óÁö³ª, MSG_PEEK ¿É¼ÇÀ» ÁÖ¾î µ¥ÀÌÅÍ¸¦ ÀÐ¾î ¿À°Ô µÇ¸é, ÀÐÀº ÀÌÈÄ¿¡µµ µ¥ÀÌÅÍ°¡ ¹öÆÛ¿¡¼­ »ç¶óÁöÁö ¾ÊÀ½
+- MSG_DONTWAIT ì˜µì…˜ê³¼ í•¨ê»˜ ì„¤ì •ë˜ì–´ ìž…ë ¥ë²„í¼ì— ìˆ˜ì‹ ëœ ë°ì´í„°ê°€ ìžˆëŠ”ì§€ í™•ì¸í•˜ëŠ” ëª©ì ìœ¼ë¡œ ì‚¬ìš©
+- í•´ë‹¹ ì˜µì…˜ì„ ì£¼ê³ , recví•¨ìˆ˜ í˜¸ì¶œ ì‹œ, ë°ì´í„°ê°€ ë²„í¼ì— ì¡´ìž¬í•œë‹¤ë©´ ë²„í¼ë¡œë¶€í„° ë°ì´í„°ë¥¼ ì½ì–´ ë“¤ìž„
+- ì½ì–´ ë“¤ì¸ ë°ì´í„°ëŠ” ë²„í¼ì—ì„œ ì‚¬ë¼ì§€ë‚˜, MSG_PEEK ì˜µì…˜ì„ ì£¼ì–´ ë°ì´í„°ë¥¼ ì½ì–´ ì˜¤ê²Œ ë˜ë©´, ì½ì€ ì´í›„ì—ë„ ë°ì´í„°ê°€ ë²„í¼ì—ì„œ ì‚¬ë¼ì§€ì§€ ì•ŠìŒ
 
 
 
 Urgent mode
-- URG=1, ±ä±Þ ¸Þ¼¼Áö°¡ Á¸ÀçÇÏ´Â ÆÐÅ¶
-- URG Pointer=3, ±ä±Þ ¸Þ¼¼Áö°¡ ¼³Á¤µÈ ¿ÀÇÁ¼Â
+- URG=1, ê¸´ê¸‰ ë©”ì„¸ì§€ê°€ ì¡´ìž¬í•˜ëŠ” íŒ¨í‚·
+- URG Pointer=3, ê¸´ê¸‰ ë©”ì„¸ì§€ê°€ ì„¤ì •ëœ ì˜¤í”„ì…‹
 
 
 int fcntl(int fd, int cmd, long arg);
-¼º°ø : 0, ½ÇÆÐ : -1
-- fd : ÆÄÀÏ(¼ÒÄÏ) µð½ºÅ©¸³ÅÍ
-- cmd : Æ¯Á¤ ±â´É ¼±ÅÃ
-- arg : ¼³Á¤ À§ÇÑ °ª(ÇÁ·Î¼¼½º ½Äº°ÀÚ)
+ì„±ê³µ : 0, ì‹¤íŒ¨ : -1
+- fd : íŒŒì¼(ì†Œì¼“) ë””ìŠ¤í¬ë¦½í„°
+- cmd : íŠ¹ì • ê¸°ëŠ¥ ì„ íƒ
+- arg : ì„¤ì • ìœ„í•œ ê°’(í”„ë¡œì„¸ìŠ¤ ì‹ë³„ìž)

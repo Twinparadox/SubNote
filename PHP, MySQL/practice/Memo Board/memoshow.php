@@ -1,4 +1,4 @@
-<?php
+ï»¿<?php
 	$host="localhost";
 	$ID="root";
 	$PW="apmsetup";
@@ -10,18 +10,18 @@
 	
 	$total=mysql_num_rows($result);
 	
-	echo ("<font align=left color=blue><b>ÀÛ¼ºµÈ ±ÛÀÇ ¼ö : $total</b></font>");
+	echo ("<font align=left color=blue><b>ìž‘ì„±ëœ ê¸€ì˜ ìˆ˜ : $total</b></font>");
 	if(!$total)
-		echo ("¾ÆÁ÷ µî·ÏµÈ ±ÛÀÌ ¾ø½À´Ï´Ù.");
+		echo ("ì•„ì§ ë“±ë¡ëœ ê¸€ì´ ì—†ìŠµë‹ˆë‹¤.");
 	else {
 		echo ("
 			<table border=1 width=850 style=border-collapse:collapse>
 			<tr align=center>
 				<td width=50>No.</td>
-				<td width=100>ÀÌ¸§</td>
-				<td width=150>³¯Â¥</td>
-				<td width=400>¸Þ¸ð</td>
-				<td>¼öÁ¤/»èÁ¦</td>
+				<td width=100>ì´ë¦„</td>
+				<td width=150>ë‚ ì§œ</td>
+				<td width=400>ë©”ëª¨</td>
+				<td>ìˆ˜ì •/ì‚­ì œ</td>
 			</tr>");
 		
 		$pagesize=5;
@@ -52,8 +52,8 @@
 					<td>$wdate</td>
 					<td>$wmemo</td>
 					<td>
-						<a href=m-modify.php?mnum=$wnum><input type=submit value=¼öÁ¤ /></a>
-						<a href=m-delete.php?dnum=$wnum><input type=submit value=»èÁ¦ /></a>
+						<a href=m-modify.php?mnum=$wnum><input type=submit value=ìˆ˜ì • /></a>
+						<a href=m-delete.php?dnum=$wnum><input type=submit value=ì‚­ì œ /></a>
 					</td>
 				</tr>
 			");
@@ -70,10 +70,10 @@
 	$npage=$cpage+1;
 	
 	if($cpage>1)
-		echo("[<a href=memoshow.php?cpage=$ppage>ÀÌÀü ÆäÀÌÁö</a>]");
+		echo("[<a href=memoshow.php?cpage=$ppage>ì´ì „ íŽ˜ì´ì§€</a>]");
 	
 	if($cpage<$endpage)
-		echo("[<a href=memoshow.php?cpage=$npage>´ÙÀ½ ÆäÀÌÁö</a>]");
+		echo("[<a href=memoshow.php?cpage=$npage>ë‹¤ìŒ íŽ˜ì´ì§€</a>]");
 	
 	echo ("</td></tr>");
 	
@@ -83,8 +83,8 @@
 	$showpage=0;
 
 	echo ("<tr><td align=center>");
-	echo ("[<a href=memoshow.php?cpage=1>Ã¹ ÆäÀÌÁö</a>]");
-	echo ("[<a href=memoshow.php?cpage=$endpage>¸¶Áö¸· ÆäÀÌÁö</a>]");
+	echo ("[<a href=memoshow.php?cpage=1>ì²« íŽ˜ì´ì§€</a>]");
+	echo ("[<a href=memoshow.php?cpage=$endpage>ë§ˆì§€ë§‰ íŽ˜ì´ì§€</a>]");
 	echo ("</td></tr>");
 	
 	echo ("<tr><td align=center>");
@@ -107,7 +107,7 @@
 	echo ("</td></tr>");
 	
 	
-	echo ("<tr><td align=center><a href=memo.html><input type=submit value=¸Þ¸ð¾²±â /></a></td></tr>
+	echo ("<tr><td align=center><a href=memo.html><input type=submit value=ë©”ëª¨ì“°ê¸° /></a></td></tr>
 		</talbe>");
 	mysql_close($con);
 ?>

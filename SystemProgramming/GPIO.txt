@@ -1,27 +1,27 @@
-GPIO
+ï»¿GPIO
 General Purpose Input Output
-ÇÁ·Î¼¼½º ¿ÜºÎÀÇ ÀåÄ¡¸¦ ¿¬°áÇÏ´Â ÇÉÀ» Á¦°øÇÏ¿© LED, Å°ÆÐµå, FND, µîÀÇ ÀÔÃâ·Â ÀåÄ¡¸¦ Á¦¾î
+í”„ë¡œì„¸ìŠ¤ ì™¸ë¶€ì˜ ìž¥ì¹˜ë¥¼ ì—°ê²°í•˜ëŠ” í•€ì„ ì œê³µí•˜ì—¬ LED, í‚¤íŒ¨ë“œ, FND, ë“±ì˜ ìž…ì¶œë ¥ ìž¥ì¹˜ë¥¼ ì œì–´
 
 
-OS ¾ø´Â È¯°æ¿¡¼­ ÀÔÃâ·Â ÀåÄ¡ Á¦¾î
-- ÀÔÃâ·Â Æ÷Æ® ·¹Áö½ºÅÍ ¸Þ¸ð¸® ÇÒ´ç
-- ¸ðµå ¼³Á¤
-- µ¥ÀÌÅÍ ÀÐ°í ¾²±â
+OS ì—†ëŠ” í™˜ê²½ì—ì„œ ìž…ì¶œë ¥ ìž¥ì¹˜ ì œì–´
+- ìž…ì¶œë ¥ í¬íŠ¸ ë ˆì§€ìŠ¤í„° ë©”ëª¨ë¦¬ í• ë‹¹
+- ëª¨ë“œ ì„¤ì •
+- ë°ì´í„° ì½ê³  ì“°ê¸°
 
-OS ÀÖ´Â È¯°æ¿¡¼­ ÀÔÃâ·Â ÀåÄ¡ Á¦¾î
-- OS ¾ø´Â È¯°æ°ú ¿ø¸®´Â µ¿ÀÏÇÏ³ª, ¸Þ¸ð¸® Á¢±Ù ÇÔ¼ö ÇÊ¿ä
-- ¸®´ª½º¿¡¼­ ÀåÄ¡¿Í ¸Þ¸ð¸®¸¦ ¿¬°á½ÃÅ°´Â ÇÔ¼ö
+OS ìžˆëŠ” í™˜ê²½ì—ì„œ ìž…ì¶œë ¥ ìž¥ì¹˜ ì œì–´
+- OS ì—†ëŠ” í™˜ê²½ê³¼ ì›ë¦¬ëŠ” ë™ì¼í•˜ë‚˜, ë©”ëª¨ë¦¬ ì ‘ê·¼ í•¨ìˆ˜ í•„ìš”
+- ë¦¬ëˆ…ìŠ¤ì—ì„œ ìž¥ì¹˜ì™€ ë©”ëª¨ë¦¬ë¥¼ ì—°ê²°ì‹œí‚¤ëŠ” í•¨ìˆ˜
 
 1. mmap()
 
 
-Çì´õ : sys/mman.h
+í—¤ë” : sys/mman.h
 
 void* mmap(void* start, size_t length, int port, int flags, int fd, off_t offset);
 int munmap(void* start, size_t length);
 
 port 
-PORT_READ(ÀÐ±â ¸ðµå), PORT_WRITE(¾²±â ¸ðµå), PORT_EXEC(½ÇÇà ¸ðµå), PORT_NONE(Á¢±Ù ºÒ°¡)
+PORT_READ(ì½ê¸° ëª¨ë“œ), PORT_WRITE(ì“°ê¸° ëª¨ë“œ), PORT_EXEC(ì‹¤í–‰ ëª¨ë“œ), PORT_NONE(ì ‘ê·¼ ë¶ˆê°€)
 
 flags
-MAP_FIXED(ÁöÁ¤µÈ ÁÖ¼Ò¸¸ »ç¿ë), MAP_SHARED(´Ù¸¥ ¸ðµç ÇÁ·Î¼¼¼­¿Í °øÀ¯), MAP_PRIVATE(´Ù¸¥ ÇÁ·Î¼¼¼­¿Í °øÀ¯ ¾È ÇÔ)
+MAP_FIXED(ì§€ì •ëœ ì£¼ì†Œë§Œ ì‚¬ìš©), MAP_SHARED(ë‹¤ë¥¸ ëª¨ë“  í”„ë¡œì„¸ì„œì™€ ê³µìœ ), MAP_PRIVATE(ë‹¤ë¥¸ í”„ë¡œì„¸ì„œì™€ ê³µìœ  ì•ˆ í•¨)

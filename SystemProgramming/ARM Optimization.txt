@@ -1,6 +1,6 @@
-### ARM Optimization
+ï»¿### ARM Optimization
 
 
 ## APCS(ARM Procedure Call Standard)
-ARM ÇÁ·Î¼¼¼­ÀÇ ÇÔ¼ö È£Ãâ ±Ô¾à
+ARM í”„ë¡œì„¸ì„œì˜ í•¨ìˆ˜ í˜¸ì¶œ ê·œì•½
 

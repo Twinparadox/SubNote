@@ -1,11 +1,11 @@
-int writev(int fd, const struct iovec* vector, int count);
+ï»¿int writev(int fd, const struct iovec* vector, int count);
 int readv(int fd, const struct iovec* vector, int count);
-¼º°ø : ÀĞÀº Àü´ŞÇÑ ¹ÙÀÌÆ® ¼ö, ½ÇÆĞ : -1
+ì„±ê³µ : ì½ì€ ì „ë‹¬í•œ ë°”ì´íŠ¸ ìˆ˜, ì‹¤íŒ¨ : -1
 
 
-- fd : µ¥ÀÌÅÍ Àü¼ÛÀÇ ¸ñÀûÁö¸¦ ³ªÅ¸³»´Â ¼ÒÄÏÀÇ ÆÄÀÏ µğ½ºÅ©¸³ÅÍ
-- vector : iovec ±¸Á¶Ã¼ ¹è¿­ÀÇ ÀÌ¸§ÀÇ ÀÎÀÚ(Àü¼Û µ¥ÀÌÅÍÀÇ Á¤º¸)
-- count : µ¥ÀÌÅÍ¸¦ Àü¼ÛÇÏ±â À§ÇØ Âü°íÇÒ iovec ±¸Á¶Ã¼ÀÇ º¯¼öÀÇ ¼ö
+- fd : ë°ì´í„° ì „ì†¡ì˜ ëª©ì ì§€ë¥¼ ë‚˜íƒ€ë‚´ëŠ” ì†Œì¼“ì˜ íŒŒì¼ ë””ìŠ¤í¬ë¦½í„°
+- vector : iovec êµ¬ì¡°ì²´ ë°°ì—´ì˜ ì´ë¦„ì˜ ì¸ì(ì „ì†¡ ë°ì´í„°ì˜ ì •ë³´)
+- count : ë°ì´í„°ë¥¼ ì „ì†¡í•˜ê¸° ìœ„í•´ ì°¸ê³ í•  iovec êµ¬ì¡°ì²´ì˜ ë³€ìˆ˜ì˜ ìˆ˜
 
 
 struct iovec{

@@ -1,8 +1,8 @@
-<?php
+О╩©<?php
 	if(!$enword) 
 	{
 		echo("
-		<script>window.alert('©╣╬Н ╢э╬Н╟║ ют╥б╣гаЖ ╬й╬р╫ю╢о╢ы.')
+		<script>window.alert('Л≤│Л√╢ К▀╗Л√╢Й╟─ Л·┘К═╔К░≤Л╖─ Л∙┼Л∙≤Л┼╣К▀┬К▀╓.')
 		history.go(-1)
 		</script>");
 		exit;
@@ -10,7 +10,7 @@
 	if(!$koword)
 	{
 		echo("
-		<script>window.alert('╢э╬Н ╤Фюл ют╥б╣гаЖ ╬й╬р╫ю╢о╢ы.')
+		<script>window.alert('К▀╗Л√╢ К°╩Л²╢ Л·┘К═╔К░≤Л╖─ Л∙┼Л∙≤Л┼╣К▀┬К▀╓.')
 		history.go(-1)
 		</script>");
 		exit;

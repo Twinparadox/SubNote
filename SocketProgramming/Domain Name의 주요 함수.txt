@@ -1,12 +1,12 @@
-gethostbyname
+ï»¿gethostbyname
 
 struct hostent* gethostbyname(const char* name);
-¼º°ø : hostent ±¸Á¶Ã¼, ½ÇÆĞ : NULL
+ì„±ê³µ : hostent êµ¬ì¡°ì²´, ì‹¤íŒ¨ : NULL
 
-- name : µµ¸ŞÀÎ ³×ÀÓ
+- name : ë„ë©”ì¸ ë„¤ì„
 
-ÁÖ¾îÁø È£½ºÆ® ³×ÀÓ¿¡ »óÀÀÇÏ´Â hostentÅ¸ÀÔÀÇ ±¸Á¶Ã¼ ¹İÈ¯
-Name : È£½ºÆ®ÀÇ ÀÌ¸§, Ç¥ÁØ Á¡ Ç¥±â¹ıÀÇ IPv4 È¤Àº IPv6 ÁÖ¼Ò
+ì£¼ì–´ì§„ í˜¸ìŠ¤íŠ¸ ë„¤ì„ì— ìƒì‘í•˜ëŠ” hostentíƒ€ì…ì˜ êµ¬ì¡°ì²´ ë°˜í™˜
+Name : í˜¸ìŠ¤íŠ¸ì˜ ì´ë¦„, í‘œì¤€ ì  í‘œê¸°ë²•ì˜ IPv4 í˜¹ì€ IPv6 ì£¼ì†Œ
 
 
 struct hostent
@@ -24,32 +24,32 @@ char** h_addr_list; // List of addresses from name server
 gethostbyaddr
 
 struct hostent* gethostbyaddr(const char* addr, socklen_t len, int type);
-¼º°ø : hostent ±¸Á¶Ã¼, ½ÇÆĞ NULL_0, -1
+ì„±ê³µ : hostent êµ¬ì¡°ì²´, ì‹¤íŒ¨ NULL_0, -1
 
-- addr : 2Áø¼öÀÇ IPÁÖ¼Ò
-- len : addrÀÇ ±æÀÌ (IPv4 : 4, IPv6 : 16)
-- type : ÁÖ¼ÒÀÇ Å¸ÀÔ (IPv4: AF_INET, IPv6 : AF_INET6)
+- addr : 2ì§„ìˆ˜ì˜ IPì£¼ì†Œ
+- len : addrì˜ ê¸¸ì´ (IPv4 : 4, IPv6 : 16)
+- type : ì£¼ì†Œì˜ íƒ€ì… (IPv4: AF_INET, IPv6 : AF_INET6)
 
-2Áø¼ö IPÁÖ¼Ò¿Í ´ëÀÀµÇ´Â hostent ±¸Á¶Ã¼ ¹İÈ¯
+2ì§„ìˆ˜ IPì£¼ì†Œì™€ ëŒ€ì‘ë˜ëŠ” hostent êµ¬ì¡°ì²´ ë°˜í™˜
 
 
 
 inet_ntoa
 
 char* inet_ntoa(struct in_addr addr);
-¼º°ø : "."À¸·Î Ç¥½ÃµÇ´Â IPv4 ÁÖ¼ÒÀÇ ¹®ÀÚ¿­, ½ÇÆĞ : NULL
+ì„±ê³µ : "."ìœ¼ë¡œ í‘œì‹œë˜ëŠ” IPv4 ì£¼ì†Œì˜ ë¬¸ìì—´, ì‹¤íŒ¨ : NULL
 
-- addr : 2Áø¼öÀÇ IPÁÖ¼Ò
+- addr : 2ì§„ìˆ˜ì˜ IPì£¼ì†Œ
 
-2Áø¼ö IPv4 ÁÖ¼Ò¸¦ "." Çü½Ä ¹®ÀÚ¿­ ÁÖ¼Ò·Î º¯È¯
+2ì§„ìˆ˜ IPv4 ì£¼ì†Œë¥¼ "." í˜•ì‹ ë¬¸ìì—´ ì£¼ì†Œë¡œ ë³€í™˜
 
 
 
 inet_addr
 
 inaddr_t inet_addr(const char* name);
-¼º°ø : 2Áø¼ö IPv4ÁÖ¼Ò, ½ÇÆĞ : -1
+ì„±ê³µ : 2ì§„ìˆ˜ IPv4ì£¼ì†Œ, ì‹¤íŒ¨ : -1
 
-- addr : 2Áø¼öÀÇ IPÁÖ¼Ò
+- addr : 2ì§„ìˆ˜ì˜ IPì£¼ì†Œ
 
-"."Çü½ÄÀÇ IPv4 ¹®ÀÚ¿­ ÁÖ¼Ò¸¦ 2Áø¼ö·Î º¯È¯
+"."í˜•ì‹ì˜ IPv4 ë¬¸ìì—´ ì£¼ì†Œë¥¼ 2ì§„ìˆ˜ë¡œ ë³€í™˜

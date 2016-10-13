@@ -1,4 +1,4 @@
-<?php
+ï»¿<?php
 	$host='localhost';
 	$user='root';
 	$PW='apmsetup';
@@ -16,11 +16,11 @@
 		exit;
 	}
 	if(!$wcontent)
-		check("¼öÀÔ/ÁöÃâ³»¿ªÀ» ÀÔ·ÂÇÏ¼¼¿ä");
+		check("ìˆ˜ìž…/ì§€ì¶œë‚´ì—­ì„ ìž…ë ¥í•˜ì„¸ìš”");
 	if(!$wincome && !$wexpense)
-		check("¼öÀÔÀÌ³ª ÁöÃâ»çÇ×À» ÀÔ·ÂÇÏ¼¼¿ä");
+		check("ìˆ˜ìž…ì´ë‚˜ ì§€ì¶œì‚¬í•­ì„ ìž…ë ¥í•˜ì„¸ìš”");
 	
-	// ¼öÀÔ, ÁöÃâ °ø¹éÀÎ °æ¿ì 0 ÀúÀå
+	// ìˆ˜ìž…, ì§€ì¶œ ê³µë°±ì¸ ê²½ìš° 0 ì €ìž¥
 	if(!$wincome)
 		$wincome=0;
 	if(!$wexpense)
@@ -28,7 +28,7 @@
 	
 	$wdate = date("Y-m-d H:i:s");
 	
-	// Äõ¸® »ðÀÔ
+	// ì¿¼ë¦¬ ì‚½ìž…
 	mysql_query("insert into household(date,content,income,expense) values ('$wdate','$wcontent','$wincome','$wexpense')",$con);
 	mysql_close($con);
 	
