@@ -1,4 +1,4 @@
-ï»¿<?php
+<?php
 	$host='localhost';
 	$user='root';
 	$PW='apmsetup';
@@ -7,14 +7,17 @@
 	$con=mysql_connect($host,$user,$PW);
 	mysql_select_db($DB,$con);
 	
-	echo ("	<form action=household-process.php method=post>
-		<font size=2>ìˆ˜ìž…/ì§€ì¶œë‚´ì—­</font>
-		<input type=text size=30 name=wcontent>
-		<font size=2>ìˆ˜ìž…(ì›)</font>
-		<input type=text size=10 name=wincome>
-		<font size=2>ì§€ì¶œ(ì›)</font>
-		<input type=text size=10 name=wexpense>
-		<input type=submit value=ìž…ë ¥>
-	</form> ");
+	echo ("<table><form action=household-process.php method=post>
+			<tr align=center>
+			<td><font size=2>¼öÀÔ/ÁöÃâ³»¿ª</font></td>
+			<td><font size=2>¼öÀÔ</font></td>
+			<td><font size=2>ÁöÃâ</font></td>
+			<td></td>			</tr>
+			<tr>
+			<td><input type=text size=30 name=wcontent></td>
+			<td><input type=text size=10 name=wincome></td>
+			<td><input type=text size=10 name=wexpense></td>
+			<td><input type=submit value=ÀÔ·Â></td></tr>
+	</form></table> ");
 	
 ?>
